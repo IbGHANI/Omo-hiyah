@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+  
+    --dark: #000;
+    --black: #333;
+    --gray: #f9f9f9;
+    --darkgray: #676767;
+    --lightblack: #444;
+    --white: #fff;
+    --green: #2bb573;
+    --lightgreen: #5ed39b;
+    --ldgreen: #ecfff6;
+    --fbg: #0c0b09;
+    --fontfamily: "Kumbh Sans", sans-serif;
+    --fontsize: 18px;
+    --fontsmallsize: 13px;
+    --letterspacing: 1.5px;
+    --texttranform: capitalize;
+    --transition: 0.5s;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+/* lading page styling start here */
+
+.landing-page{
+    position: relative;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2% 3%;
+    background: var(--ldgreen);
+    position: fixed;
+    z-index: 9;
+    box-shadow: 2px 1px 2px var(--green);
+}
+
+.landing-page > .Logo{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.landing-page > .Logo > .logoP > img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.landing-page > .Logo > .logoT{
+    display: block;
+}
+
+.landing-page > .Logo > .logoT > h5{
+    color: var(--black);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsize);
+    letter-spacing: var(--letterspacing);
+    text-transform: var(--texttranform);
+    cursor: pointer;
+
+}
+
+.landing-page > .Logo > .logoT > p{
+    font-family: var(--fontfamily);
+    font-size: var(--fontsmallsize);
+    text-transform: var(--texttranform);
+    cursor: pointer;
+}
+
+.landing-page > .header-nav > ul{
+    list-style: none;
+    display: flex;
+}
+
+.landing-page > .header-nav > ul > li{
+    margin-right: 13px;
+}
+
+.landing-page > .header-nav > ul > li > a{
+    position: relative;
+    text-decoration: none;
+    color: var(--fbg);
+    text-transform: var(--texttranform);
+    letter-spacing: 1px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.landing-page > .header-nav > ul > li > a::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--green);
+    position: absolute;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .5s linear;
+    
+}
+
+.landing-page > .header-nav > ul > li > a:hover::before{
+    transform: scale(1);
+    transform-origin: left;
+    cursor: pointer;
+}
+
+
+.landing-page > .contact{
+    width: 100px;
+    background-color: var(--green);
+    text-align: center;
+    padding: 10px;
+
+}
+.landing-page > .contact:hover{
+    background: yellowgreen;
+    transition: .5s;
+}
+.landing-page > .contact:hover a{
+    color: #000;
+/
+}
+
+.landing-page > .contact > a{
+    text-decoration: none;
+    color: #ecfff6;
+    text-transform: var(--texttranform);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsmallsize);
+}
