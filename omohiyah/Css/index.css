@@ -150,3 +150,74 @@ html{
     font-family: var(--fontfamily);
     font-size: var(--fontsmallsize);
 }
+
+
+
+
+.arrow {
+    margin-left: 5px;
+}
+
+.dropdown ul,
+.dropdown-2 ul {
+    display: none;
+    position: absolute;
+    padding: 1% 1%;
+    background-color: var(--ldgreen);
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+}
+
+.dropdown-2 {
+    font-family: var(--fontfamily);
+    font-size: var(--fontsmallsize);
+    color: var(--fbg);
+    text-transform: var(--texttranform);
+}
+.dropdown:hover > ul,
+.dropdown-2:hover > ul{
+    display: block;
+}
+
+.dropdown ul li,
+.dropdown-2 ul li{
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px;
+    text-align: left;
+    color: var(--fbg);
+}
+
+.dropdown ul li a:hover,
+.dropdown-2 ul li a:hover
+{
+    color: var(--lightgreen);
+    transition: var(--transition);
+}
+
+.dropdown ul li > a,
+.dropdown-2 ul li > a{
+    position: relative;
+    text-align: left;
+    font-family: var(--fontfamily);
+    font-size: var(--fontsmallsize);
+    color: var(--fbg);
+    text-transform: var(--texttranform);  
+    text-decoration: none;
+}
+
+.links{
+  margin-bottom: 8px;
+}
+
+.dropdown ul .dropdown ul {
+    left: 100%;
+    top: 0;
+    display: none;
+}
+
+.dropdown ul .dropdown:hover > ul {
+    display: block;
+}
