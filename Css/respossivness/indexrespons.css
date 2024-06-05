@@ -21,6 +21,7 @@
         --darkgray: #676767;
         --lightblack: #444;
         --white: #fff;
+        --color: bisque;
         --green: #2bb573;
         --lightgreen: #5ed39b;
         --ldgreen: #ecfff6;
@@ -49,19 +50,25 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: transparent;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        z-index: 10;
     }
 
     #showMenu,
     #hideMenu{
         display: block;
         font-size: var(--fontsize);
-        color: var(--fbg);
+        color: var(--gray);
     }
+
     .landing-page > .header-nav > #hideMenu{
         text-align: right;
         font-size: var(--fontsize);
-        color: var(--fbg);
+        color: var(--gray);
         margin-bottom: 5%;
+        margin-top: 5%;
     }
 
     .landing-page > .Logo{
@@ -77,10 +84,12 @@
     .landing-page > .Logo > .logoT > h5{
         font-size: var(--fontsmallsize2);
         font-weight: var(--fontwiegth);
+        color: var(--color);
     }
 
     .landing-page > .Logo > .logoT > p{
         font-size: 11px;
+        color: var(--gray);
     }
     .landing-page > .header-nav{
         position: absolute;
@@ -89,12 +98,13 @@
         width: 250px;
         height: 100vh;
         z-index: 999;
-        background: var(--ldgreen); 
+        background: var(--fbg); 
         box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
-        transition: 0.5s;
-        padding: 3% 3%;
-        display: inline-block;
+        transition: left 0.3s ease;
+        padding: 3% 5%;
+        display: block;
     }
+
     .landing-page > .header-nav > ul {
         display: block;
     }
@@ -102,28 +112,55 @@
     .landing-page > .header-nav > ul > li {
         margin-bottom: 8%;
     }
-    .school{
-        font-family: var(--fontfamily);
-        margin-left: 10px;
+    .landing-page > .header-nav > ul > li > a
+    {
+        color: var(--gray);
     }
 
-    .dropdown:hover #listItem,
-    .dropdown-2:hover #listItem{
-        max-height: 1000px;
-        transition: max-height 5s ease-in;
+    .dropdown > #listItem,
+    .dropdown-2 > #listItem{
+        margin-left: 9px;
+        color: var(--gray);
     }
-
-
+    .dropdown ul,
+    .dropdown-2 ul {
+        background-color: 	#242526;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown ul > li > a,
+    .dropdown-2 ul li a{
+        color: var(--gray);
+    }
 
     .landing-page > .contact{
         display: none;
+    }
+
+    .landing-2 {
+        width: 100%;
+    }
+    .landing-2 > .container,
+    .landing-2 > .container > .heading,
+    .landing-2 > .container > .text{
+        width: 100%;
+    }
+
+    .landing-2 > .container > .heading > p{
+        font-size: 25px;
+        font-weight: var(--fontwiegth);
+        letter-spacing: var(--letterspacing);
+    }
+    .landing-2 > .container > .text > h6{
+        font-size: 20px;
+        line-height: 30.5px;
+        letter-spacing: var(--letterspacing);
     }
 
 }
 
 
 @media only screen and (max-width: 932px){
-    
+
     *{
         margin: 0;
         padding: 0;
@@ -139,6 +176,7 @@
         --darkgray: #676767;
         --lightblack: #444;
         --white: #fff;
+        --color: bisque;
         --green: #2bb573;
         --lightgreen: #5ed39b;
         --ldgreen: #ecfff6;
@@ -167,38 +205,46 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: transparent;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        z-index: 10;
     }
 
     #showMenu,
     #hideMenu{
         display: block;
         font-size: var(--fontsize);
-        color: var(--fbg);
+        color: var(--gray);
     }
+
     .landing-page > .header-nav > #hideMenu{
         text-align: right;
         font-size: var(--fontsize);
-        color: var(--fbg);
+        color: var(--gray);
         margin-bottom: 5%;
+        margin-top: 5%;
     }
 
     .landing-page > .Logo{
-        width: 40%;
+        width: 50%;
         display: flex;
         justify-content: left;
         align-items: center;
     }
     .landing-page > .Logo > .logoP > img{
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
     }
     .landing-page > .Logo > .logoT > h5{
-        font-size: var(--fontsmallsize2);
+        font-size: 21px;
         font-weight: var(--fontwiegth);
+        color: var(--color);
     }
 
     .landing-page > .Logo > .logoT > p{
-        font-size: 11px;
+        font-size: 12px;
+        color: var(--gray);
     }
     .landing-page > .header-nav{
         position: absolute;
@@ -207,12 +253,13 @@
         width: 250px;
         height: 100vh;
         z-index: 999;
-        background: var(--ldgreen); 
+        background: var(--fbg); 
         box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
-        transition: 0.5s;
-        padding: 3% 3%;
-        display: inline-block;
+        transition: left 0.3s ease;
+        padding: 3% 5%;
+        display: block;
     }
+
     .landing-page > .header-nav > ul {
         display: block;
     }
@@ -220,21 +267,51 @@
     .landing-page > .header-nav > ul > li {
         margin-bottom: 8%;
     }
-    .school{
-        font-family: var(--fontfamily);
-        margin-left: 10px;
+    .landing-page > .header-nav > ul > li > a
+    {
+        color: var(--gray);
     }
 
-    .dropdown:hover #listItem,
-    .dropdown-2:hover #listItem{
-        max-height: 1000px;
-        transition: max-height 5s ease-in;
+    .dropdown > #listItem,
+    .dropdown-2 > #listItem{
+        margin-left: 9px;
+        color: var(--gray);
     }
-
-
+    .dropdown ul,
+    .dropdown-2 ul {
+        background-color: #242526;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown ul > li > a,
+    .dropdown-2 ul li a{
+        color: var(--gray);
+    }
 
     .landing-page > .contact{
         display: none;
     }
 
-}
+    .landing-2 {
+        width: 100%;
+    }
+    .landing-2 > .container,
+    .landing-2 > .container > .heading,
+    .landing-2 > .container > .text{
+        width: 100%;
+    }
+
+    .landing-2 > .container > .heading > p{
+        font-size: 27px;
+        font-weight: var(--fontwiegth);
+        letter-spacing: var(--letterspacing);
+    }
+    .landing-2 > .container > .text > h6{
+        font-size: 22px;
+        line-height: 30.5px;
+        letter-spacing: var(--letterspacing);
+    }
+
+    
+ }
+
+
