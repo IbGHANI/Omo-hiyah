@@ -221,3 +221,8 @@ html{
 .dropdown ul .dropdown:hover > ul {
     display: block;
 }
+
+#hideMenu,
+#showMenu{
+    display: none;
+}

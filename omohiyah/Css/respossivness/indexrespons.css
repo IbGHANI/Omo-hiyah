@@ -5,14 +5,236 @@
 @media only screen and (max-width: 768px){
 
 
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    :root{
+      
+        --dark: #000;
+        --black: #333;
+        --gray: #f9f9f9;
+        --darkgray: #676767;
+        --lightblack: #444;
+        --white: #fff;
+        --green: #2bb573;
+        --lightgreen: #5ed39b;
+        --ldgreen: #ecfff6;
+        --fbg: #0c0b09;
+        --fontfamily: "Kumbh Sans", sans-serif;
+        --fontsize: 18px;
+        --fontsmallsize: 13px;
+        --fontsmallsize2: 12px;
+        --letterspacing: 1.5px;
+        --texttranform: capitalize;
+        --transition: 0.5s;
+        --fontwiegth: bolder;
+    }
+    
+    
+    html{
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    }
+    
     .landing-page{
+        position: relative;
         width: 100%;
-        padding: 8px 4px;
+        padding:  2% 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #showMenu,
+    #hideMenu{
+        display: block;
+        font-size: var(--fontsize);
+        color: var(--fbg);
+    }
+    .landing-page > .header-nav > #hideMenu{
+        text-align: right;
+        font-size: var(--fontsize);
+        color: var(--fbg);
+        margin-bottom: 5%;
+    }
+
+    .landing-page > .Logo{
+        width: 40%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .landing-page > .Logo > .logoP > img{
+        width: 30px;
+        height: 30px;
+    }
+    .landing-page > .Logo > .logoT > h5{
+        font-size: var(--fontsmallsize2);
+        font-weight: var(--fontwiegth);
+    }
+
+    .landing-page > .Logo > .logoT > p{
+        font-size: 11px;
+    }
+    .landing-page > .header-nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        z-index: 999;
+        background: var(--ldgreen); 
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        padding: 3% 3%;
+        display: inline-block;
+    }
+    .landing-page > .header-nav > ul {
+        display: block;
+    }
+
+    .landing-page > .header-nav > ul > li {
+        margin-bottom: 8%;
+    }
+    .school{
+        font-family: var(--fontfamily);
+        margin-left: 10px;
+    }
+
+    .dropdown:hover #listItem,
+    .dropdown-2:hover #listItem{
+        max-height: 1000px;
+        transition: max-height 5s ease-in;
+    }
+
+
+
+    .landing-page > .contact{
+        display: none;
     }
 
 }
 
 
 @media only screen and (max-width: 932px){
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    :root{
+      
+        --dark: #000;
+        --black: #333;
+        --gray: #f9f9f9;
+        --darkgray: #676767;
+        --lightblack: #444;
+        --white: #fff;
+        --green: #2bb573;
+        --lightgreen: #5ed39b;
+        --ldgreen: #ecfff6;
+        --fbg: #0c0b09;
+        --fontfamily: "Kumbh Sans", sans-serif;
+        --fontsize: 18px;
+        --fontsmallsize: 13px;
+        --fontsmallsize2: 12px;
+        --letterspacing: 1.5px;
+        --texttranform: capitalize;
+        --transition: 0.5s;
+        --fontwiegth: bolder;
+    }
+    
+    
+    html{
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    }
+    
+    .landing-page{
+        position: relative;
+        width: 100%;
+        padding:  2% 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #showMenu,
+    #hideMenu{
+        display: block;
+        font-size: var(--fontsize);
+        color: var(--fbg);
+    }
+    .landing-page > .header-nav > #hideMenu{
+        text-align: right;
+        font-size: var(--fontsize);
+        color: var(--fbg);
+        margin-bottom: 5%;
+    }
+
+    .landing-page > .Logo{
+        width: 40%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .landing-page > .Logo > .logoP > img{
+        width: 30px;
+        height: 30px;
+    }
+    .landing-page > .Logo > .logoT > h5{
+        font-size: var(--fontsmallsize2);
+        font-weight: var(--fontwiegth);
+    }
+
+    .landing-page > .Logo > .logoT > p{
+        font-size: 11px;
+    }
+    .landing-page > .header-nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        z-index: 999;
+        background: var(--ldgreen); 
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        padding: 3% 3%;
+        display: inline-block;
+    }
+    .landing-page > .header-nav > ul {
+        display: block;
+    }
+
+    .landing-page > .header-nav > ul > li {
+        margin-bottom: 8%;
+    }
+    .school{
+        font-family: var(--fontfamily);
+        margin-left: 10px;
+    }
+
+    .dropdown:hover #listItem,
+    .dropdown-2:hover #listItem{
+        max-height: 1000px;
+        transition: max-height 5s ease-in;
+    }
+
+
+
+    .landing-page > .contact{
+        display: none;
+    }
 
 }
