@@ -3,24 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omo-hiyah Group Of Schools College Of Arabic & Islamic Studies</title>
-    <link rel="stylesheet" href="../Css/index.css">
-    <link rel="stylesheet" href="../Css/respossivness/indexrespons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital@1&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <title>Responsive Navbar with Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3BX8PT3HApSvHGoJIHWIcfHc4UuCZsAh6l1bQ" crossorigin="anonymous">
+    <style>
+        /* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(144, 238, 144, 0.712), rgba(152, 251, 152, 0.614)); /* Light green gradient background */
+}
+
+.landing-page {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoP img {
+    width: 50px;
+    height: 50px;
+}
+
+.logoT h5, .logoT p {
+    margin: 0;
+}
+
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    padding-top: 60px;
+}
+
+.header-nav.scrolled {
+    background-color: lightgreen; /* New background color when scrolled */
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li {
+    position: relative;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.header-nav a:hover {
+    background-color: #575757;
+}
+
+.fa-align-justify,
+.fa-times {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown ul,
+.dropdown-2 ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown:hover > ul,
+.dropdown-2:hover > ul {
+    display: block;
+}
+
+.dropdown-2 ul {
+    left: 100%;
+    top: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .fa-align-justify {
+        display: block;
+    }
+
+    .header-nav {
+        left: -300px;
+    }
+
+    .header-nav.show-menu {
+        left: 0;
+    }
+
+    .contact {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+.active-link {
+    background-color: #575757;
+    color: #fff;
+}
+
+    </style>
 </head>
 <body>
-
-    <!-- landing page here -->
-    <section class="landing-page">
-
+    <section class="landing-page" id="landing-page">
         <div class="Logo">
             <div class="logoP">
                 <img src="../Image/logo.JPG" alt="">
             </div>
-
             <div class="logoT">
                 <h5>Omo-hiyah</h5>
                 <p>college</p>
@@ -30,26 +146,23 @@
         <div class="header-nav" id="navLinks">
             <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()" id="hideMenu"></i>
             <ul id="myTarget">
-                <li><a href="#">home</a></li>
-                <li><a href="./Html/test.html">about</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">prayer time</a></li>
-
-                <!-- dropdwon -->
-                <li class="dropdown">
-
+                <li class="nav-item"><a href="./index.html">home</a></li>
+                <li class="nav-item"><a href="#about">about</a></li>
+                <li class="nav-item"><a href="#">services</a></li>
+                <li class="nav-item"><a href="#">prayer time</a></li>
+                <!-- Dropdown -->
+                <li class="dropdown nav-item">
                     <div class="School" id="listItem">
                         Our Sections<i class="fa fa-angle-down arrow" aria-hidden="true"></i>
                     </div>
-
                     <ul>
-                        <li>
+                        <li class="nav-item">
                             <a href="#" class="links">secondary</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#" class="links">primary</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#" class="links">diploma</a>
                         </li>
                         <li class="dropdown-2">
@@ -57,16 +170,16 @@
                                 information<i class="fa fa-angle-down arrow" aria-hidden="true"></i>
                             </div>
                             <ul>
-                                <li>
+                                <li class="nav-item">
                                     <a href="#" class="links">proprietor</a>
                                 </li>
-                                <li>
+                                <li class="nav-item">
                                     <a href="#" class="links">proprietress</a>
                                 </li>
-                                <li>
+                                <li class="nav-item">
                                     <a href="#" class="links">principal</a>
                                 </li>
-                                <li>
+                                <li class="nav-item">
                                     <a href="#" class="links">head-master</a>
                                 </li>
                             </ul>
@@ -77,18 +190,67 @@
             </ul>
         </div>
 
-
         <div class="contact">
             <a href="#">contact us</a>
         </div>
-
         <i class="fa fa-align-justify" aria-hidden="true" onclick="showMenu()" id="showMenu"></i>
     </section>
-    <!-- landing page ends here -->
 
+    <script>
+        // scripts.js
 
+var navLinks = document.getElementById("navLinks");
 
-    <script src="../Js/mediaFunc.js">
+function showMenu() {
+    navLinks.classList.add("show-menu");
+}
+
+function hideMenu() {
+    navLinks.classList.remove("show-menu");
+}
+
+document.addEventListener('click', function(event) {
+    var isClickInsideNav = navLinks.contains(event.target);
+    var isClickOnShowMenuButton = document.getElementById("showMenu").contains(event.target);
+
+    if (!isClickInsideNav && !isClickOnShowMenuButton) {
+        hideMenu();
+    }
+});
+
+var hideMenuButton = document.getElementById("hideMenu");
+if (hideMenuButton) {
+    hideMenuButton.addEventListener("click", hideMenu);
+}
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active-link'));
+        this.classList.add('active-link');
+    });
+});
+
+// Optionally, set the active link based on the current URL
+document.addEventListener("DOMContentLoaded", function() {
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active-link");
+        }
+    });
+});
+
+// Change header background on scroll
+window.addEventListener('scroll', function() {
+    var header = document.getElementById('navLinks');
+    if (window.scrollY > 50) { // Change 50 to the number of pixels after which you want to change the background
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
     </script>
 </body>
 </html>
