@@ -434,10 +434,14 @@ html{
 .services{
     position: relative;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: block;
     padding: 3% 3%;
     background-color: var(--ldgreen);
+    border-bottom: 1px solid var(--lightgreen);
+}
+.services2{
+    min-height: 150vh;
 }
 
 .services > .headings > h1{
@@ -465,28 +469,32 @@ html{
     display: block;
     flex-basis: 10px;
     width: 120%;
-    padding: 2%;
+    /* padding: 2%; */
     box-shadow: 1px 1px 2px var(--green);
     border-radius: 10px;
+    margin-bottom: 2%;
 }
 
 .services > .containers > .box > .image img{
-    width: 15rem;
-    height: 15rem;
+    width: 17rem;
+    height: 17rem;
     border-radius: 5px;
     border: none;
     box-shadow: 1px 1px 2px var(--green);
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 
 }
 
 .services > .containers > .box > .text > h3{
     text-align: center;
-    width: 100%;
     color: var(--darkgreen);
     font-family: var(--fontfamily);
-    text-transform: var(--text-transform);
+    text-transform: var(--texttranform);
     font-weight: bolder;
+    padding: 5px;
+    background: var(--darkgreen);
+    color: var(--gray);
+    margin-bottom: 6%;
 }
 
 .services > .containers > .box > .text{
@@ -498,3 +506,5 @@ html{
     text-align: center;
     font-size: 1rem;
 }
+
+
