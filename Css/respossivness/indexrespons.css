@@ -214,23 +214,58 @@
     .services{
         padding: 3% 2%;
         max-width: 100%;
-        min-height: 300vh;
+        min-height: 210vh;
+     
     }
     .services .containers{
         width: 100%;
-        min-height: 270vh;
+        min-height: 200vh;
+    
     }
     .services > .headings > h1{
         font-size: 23px;
     }
-    .services > .containers > .box{
-        margin-bottom: 7%;
-
+  
+    .services2{
+        max-width: 100%;
+        min-height: 260vh;
+    }
+    .services2 > .containers{ 
+        width: 100%;
+        min-height: 250vh;
     }
 
-    .services2{
+    .landing{
         width: 100%;
-        min-height: 290vh;
+        display: block;
+        padding: 5px;
+        min-height: 30vh;
+        background-color: red;
+    }
+    .slide-container1.active,
+    .slide-container2.active,
+    .slide-container3.active,
+    .slide-container4.active,
+    .slide-container5.active,
+    .slide-container6.active,
+    .slide-container7.active,
+    .slide-container8.active{
+        width: 100%;
+    }
+
+    .landing > .slide-container1 > .picture,
+    .landing > .slide-container2 > .picture,
+    .landing > .slide-container3 > .picture,
+    .landing > .slide-container4 > .picture,
+    .landing > .slide-container5 > .picture,
+    .landing > .slide-container6 > .picture,
+    .landing > .slide-container7 > .picture,
+    .landing > .slide-container8 > .picture{
+        width: 200%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        object-fit: contain;
     }
 }
 
@@ -381,13 +416,6 @@
     {
         color: var(--gray);
     }
-/* 
-    .dropdown > #listItem,
-    .dropdown-2 > #listItem{
-        margin-left: 9px;
-        color: var(--gray);
-        font-family: var(--fontfamily);
-    } */
     .dropdown ul{
         background-color: 	#242526;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -450,28 +478,23 @@
     .about > .pic{
         width: 100%;
     }
-    .services{
+   .services{
         padding: 3% 2%;
         max-width: 100%;
-        min-height: 300vh;
-
+        min-height: 210vh;
+        background-color: red;
     }
     .services .containers{
         width: 100%;
-        min-height: 280vh;
+        min-height: 260vh;
+        background-color: black;
     }
     .services > .headings > h1{
         font-size: 24px;
     }
     .services > .containers > .box{
         padding: 3% 4%;
-        margin-bottom: 7%;
-    }
-
-    .services > .containers > .box{
-        /* padding: 3% 3%; */
-        margin-bottom: 7%;
-
+     
     }
     
     .services > .containers > .box > .image img{
@@ -480,9 +503,44 @@
     }
 
     .services2{
+        max-width: 100%;
+        min-height: 270vh;
+        border-bottom: 1px solid var(--lightgreen);
+    }
+
+
+    .landing{
         width: 100%;
-        min-height: 290vh;
+        display: block;
+        padding: 5px;
+        min-height: 30vh;
+        background-color: red;
+    }
+    .slide-container1.active,
+    .slide-container2.active,
+    .slide-container3.active,
+    .slide-container4.active,
+    .slide-container5.active,
+    .slide-container6.active,
+    .slide-container7.active,
+    .slide-container8.active{
+        width: 100%;
+    }
+
+    .landing > .slide-container1 > .picture,
+    .landing > .slide-container2 > .picture,
+    .landing > .slide-container3 > .picture,
+    .landing > .slide-container4 > .picture,
+    .landing > .slide-container5 > .picture,
+    .landing > .slide-container6 > .picture,
+    .landing > .slide-container7 > .picture,
+    .landing > .slide-container8 > .picture{
+        width: 200%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        object-fit: contain;
     }
  }
-
+ 
 
