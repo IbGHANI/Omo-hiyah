@@ -2,10 +2,9 @@
 
 
 
-@media only screen and (max-width: 768px){
 
-
-
+@media only screen and (max-width: 896px) {
+   
     *{
         margin: 0;
         padding: 0;
@@ -72,7 +71,7 @@
     #showMenu,
     #hideMenu{
         display: block;
-        font-size: var(--fontsize);
+        font-size: 24px;
         color: var(--gray);
     }
     .landing-page.active > #showMenu{
@@ -115,13 +114,13 @@
         height: 30px;
     }
     .landing-page > .Logo > .logoT > h5{
-        font-size: 16px;
+        font-size: 19px;
         font-weight: bolder;
         color: var(--color);
     }
 
     .landing-page > .Logo > .logoT > p{
-        font-size: 11px;
+        font-size: 15px;
         color: var(--gray);
     }
     .landing-page > .header-nav{
@@ -148,11 +147,21 @@
     .landing-page > .header-nav > ul > li > a
     {
         color: var(--gray);
+        font-size: 15px;
     }
-
     .dropdown ul{
         background-color: 	#242526;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown > #listItem{
+        font-family: var(--fontfamily);
+        text-transform: var(--texttranform);
+        font-size: 15px;
+        margin-left: 6px;
+    }
+
+    .landing-page.active > .header-nav > .dropdown ul{
+        background-color: var(--ldgreen);
     }
     .dropdown ul > li > a{
         color: var(--gray);
@@ -172,12 +181,15 @@
     }
 
     .landing-2 > .container > .heading > p{
-        font-size: 25px;
+        font-size: 30px;
         font-weight: var(--fontwiegth);
         letter-spacing: var(--letterspacing);
     }
+    .landing-2 > .container > .text > h2{
+        font-size: 3.5rem;
+    }
     .landing-2 > .container > .text > h6{
-        font-size: 20px;
+        font-size: 25px;
         line-height: 30.5px;
         letter-spacing: var(--letterspacing);
     }
@@ -185,26 +197,32 @@
     .about{
         width: 100%;
         display: block;
+        min-height: 90vh;
     }
     .about > .content{
          width: 100%;
          display: block;
-         padding: 2% 4%;
+         padding: 2% 3%;
     }
     .about > .content > h1{
         width: 100%;
         text-align: left;
-        font-size: 23px;
+        font-size: 30px;
         margin-bottom: 3%;
+    }
+    .about > .content > h1 > span{
+        font-size: 3rem;
     }
   
     .about > .content > p{
+        font-size: 22px;
         text-align: left;
         width: 100%;
         margin-bottom: 7%;
     }
 
     .about > .content > .readmore{
+        padding: 15px;
         width: 50%;
         margin-bottom: 5%;
     }
@@ -212,8 +230,25 @@
         width: 100%;
     }
 
+    .about > .pic > img{
+        width: 9.5rem;
+        height: 9.5rem;
+        object-fit: contain;
+    }
+    .about > .pic > :first-child{
+        border-radius: 40px;
+        border: none;
+        box-shadow: none;
+    }
+    .about > .pic > :last-child{
+        border-radius: 40px;
+        border: none;
+        box-shadow: none;
+    }
+
+
     .services{
-        padding: 2% 2%;
+        padding: 3% 3%;
         max-width: 100%;
         min-height: 250vh;
     }
@@ -222,14 +257,17 @@
         min-height: 240vh;
     }
     .services > .headings > h1{
-        font-size: 23px;
+        font-size: 25px;
     }
     .services .containers > .box{
-        margin-bottom: 3%;
+        margin-bottom: 1px;
+    }
+    .services .containers > .box > .text > h3{
+        font-size: 25px;
     }
     .services > .containers > .box > .image img{
-        width: 21rem;
-        height: 21rem;
+        width: 24rem;
+        height: 24rem;
     }
 
     .pillers{
@@ -242,24 +280,32 @@
         min-height: 300vh;
     }
     .pillers > .headings > h1{
-        font-size: 23px;
+        font-size: 25px;
     }
-    .pillers .pillers-containers > .boxs{
-        margin-bottom: 3%;
+    .pillers .pillers-containers > .boxs > .text > h3{
+        font-size: 25px;
     }
     .pillers > .pillers-containers > .boxs > .image img{
-        width: 21rem;
-        height: 21rem;
+        width: 24rem;
+        height: 24rem;
     }
 
     .landing{
         width: 100%;
         display: block;
-        padding: 5px;
-        min-height: 30vh;
+        padding: 10px 3px;
+        min-height: 4s0vh;
         background-color: var(--darkgreen);
-  
     }
+
+    /* .landing > h1{
+        font-family: var(--fontfamily);
+        font-size: 30px;
+        text-align: center;
+        color: var(--gray);
+        text-transform: var(--texttranform);
+
+    } */
     .slide-container1.active,
     .slide-container2.active,
     .slide-container3.active,
@@ -269,8 +315,18 @@
     .slide-container7.active,
     .slide-container8.active{
         width: 100%;
+        height: 100%;
     }
-
+    
+    /* .landing > .slide-container1,
+    .landing > .slide-container2,
+    .landing > .slide-container3,
+    .landing > .slide-container4,
+    .landing > .slide-container5,
+    .landing > .slide-container6,
+    .landing > .slide-container7,
+    .landing > .slide-container8{
+    } */
     .landing > .slide-container1 > .picture,
     .landing > .slide-container2 > .picture,
     .landing > .slide-container3 > .picture,
@@ -280,11 +336,11 @@
     .landing > .slide-container7 > .picture,
     .landing > .slide-container8 > .picture{
         width: 200%;
-        height: 50vh;
+        height: 40vh;
         background-size: cover;
         background-position: center;
-        border-radius: 10px;
         object-fit: contain;
+        margin-top: 0;
     }
-}
-
+ }
+ 
