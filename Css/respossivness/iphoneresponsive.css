@@ -181,15 +181,15 @@
     }
 
     .landing-2 > .container > .heading > p{
-        font-size: 30px;
+        font-size: 25px;
         font-weight: var(--fontwiegth);
         letter-spacing: var(--letterspacing);
     }
     .landing-2 > .container > .text > h2{
-        font-size: 3.5rem;
+        font-size: 3.1rem;
     }
     .landing-2 > .container > .text > h6{
-        font-size: 25px;
+        font-size: 23px;
         line-height: 30.5px;
         letter-spacing: var(--letterspacing);
     }
@@ -207,11 +207,11 @@
     .about > .content > h1{
         width: 100%;
         text-align: left;
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 3%;
     }
     .about > .content > h1 > span{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
   
     .about > .content > p{
@@ -231,8 +231,9 @@
     }
 
     .about > .pic > img{
-        width: 9.5rem;
-        height: 9.5rem;
+
+        width: 11rem;
+        height: 11rem;
         object-fit: contain;
     }
     .about > .pic > :first-child{
@@ -263,11 +264,11 @@
         margin-bottom: 1px;
     }
     .services .containers > .box > .text > h3{
-        font-size: 25px;
+        font-size: 23px;
     }
     .services > .containers > .box > .image img{
-        width: 24rem;
-        height: 24rem;
+        width: 23rem;
+        height: 23rem;
     }
 
     .pillers{
@@ -283,12 +284,43 @@
         font-size: 25px;
     }
     .pillers .pillers-containers > .boxs > .text > h3{
-        font-size: 25px;
+        font-size: 23px;
     }
     .pillers > .pillers-containers > .boxs > .image img{
         width: 24rem;
         height: 24rem;
     }
+
+
+
+    
+    .section{
+        padding: 2% 2%;
+        max-width: 100%;
+        min-height: 235vh;
+    }
+    .section > .section-containers{
+        width: 100%;
+        min-height: 230vh;
+    }
+    .section > .headings > h1{
+        font-size: 25px;
+    }
+    .section > .section-containers > .boxs > .text > h3{
+        font-size: 23px;
+    }
+    .section > .section-containers > .boxs > .image img{
+        width: 24rem;
+        height: 24rem;
+    }
+
+
+
+
+
+
+
+
 
     .landing{
         width: 100%;
@@ -298,14 +330,6 @@
         background-color: var(--darkgreen);
     }
 
-    /* .landing > h1{
-        font-family: var(--fontfamily);
-        font-size: 30px;
-        text-align: center;
-        color: var(--gray);
-        text-transform: var(--texttranform);
-
-    } */
     .slide-container1.active,
     .slide-container2.active,
     .slide-container3.active,
@@ -318,15 +342,6 @@
         height: 100%;
     }
     
-    /* .landing > .slide-container1,
-    .landing > .slide-container2,
-    .landing > .slide-container3,
-    .landing > .slide-container4,
-    .landing > .slide-container5,
-    .landing > .slide-container6,
-    .landing > .slide-container7,
-    .landing > .slide-container8{
-    } */
     .landing > .slide-container1 > .picture,
     .landing > .slide-container2 > .picture,
     .landing > .slide-container3 > .picture,
@@ -342,5 +357,8 @@
         object-fit: contain;
         margin-top: 0;
     }
+
+
+
  }
  

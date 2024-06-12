@@ -228,8 +228,8 @@
         margin-bottom: 3%;
     }
     .services > .containers > .box > .image img{
-        width: 21rem;
-        height: 21rem;
+        width: 20rem;
+        height: 20rem;
     }
 
     .pillers{
@@ -248,15 +248,36 @@
         margin-bottom: 3%;
     }
     .pillers > .pillers-containers > .boxs > .image img{
-        width: 21rem;
-        height: 21rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .section{
+        padding: 2% 2%;
+        max-width: 100%;
+        min-height: 240vh;
+
+    }
+    .section > .section-containers{
+        width: 100%;
+        min-height: 230vh;
+    }
+    .section > .headings > h1{
+        font-size: 23px;
+    }
+    .section > .section-containers > .boxs{
+        margin-bottom: 3%;
+    }
+    .section > .section-containers > .boxs > .image img{
+        width: 20rem;
+        height: 20rem;
     }
 
     .landing{
         width: 100%;
         display: block;
         padding: 5px;
-        min-height: 30vh;
+        min-height: 50vh;
         background-color: var(--darkgreen);
   
     }
