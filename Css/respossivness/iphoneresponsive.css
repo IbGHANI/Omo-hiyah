@@ -359,7 +359,15 @@
         margin-top: 0;
     }
 
+    .landings{
+        width: 100%;
+        display: block;
+    }
 
+    .landings > .content{
+        width: 100%;
+        margin-bottom: 7%;
+    }
 
  }
  

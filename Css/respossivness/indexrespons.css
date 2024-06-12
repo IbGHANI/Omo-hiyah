@@ -315,5 +315,20 @@
         border-radius: 10px;
         object-fit: contain;
     }
+
+    .landings{
+        width: 100%;
+        display: block;
+    }
+
+    .landings > .content{
+        width: 100%;
+        margin-bottom: 7%;
+    }
+
+
+
+
+
 }
 

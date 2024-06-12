@@ -22,3 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(nextSlide, 2010);
 });
 
+
+
+// ScrollReveal().reveal('.', {
+//     duration: 700,
+//     delay: 200,
+//     easing: 'ease-in-out',
+//     origin: 'top',
+//     distance: '50px',
+//     opacity: 0,
+//     scale: 0.8
+// });

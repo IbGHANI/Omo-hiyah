@@ -595,7 +595,7 @@ html{
 .section{
     position: relative;
     width: 100%;
-    min-height: 210vh;
+    min-height: 100vh;
     display: block;
     padding: 3% 3%;
     background-color: #166d3b;
@@ -669,7 +669,6 @@ html{
 
 
 .landing {
-    overflow: hidden;
     width: 100%;
     display: flex;
     align-items: center;
@@ -688,7 +687,7 @@ html{
 .slide-container6,
 .slide-container7,
 .slide-container8 {
-    display: none;   
+    display: none;  
 }
 
 .slide-container1.active,
@@ -780,3 +779,62 @@ html{
     background-size: cover;
 }
 
+
+
+
+
+
+.landings {
+    overflow: hidden;
+    width: 100%;
+    padding: 3% 3%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(19, 18, 18, 0.712), rgba(14, 13, 13, 0.614)), url(../Image/help.jpg);
+}
+
+.landings > .content {
+    width: 40%;
+    background-color: var(--fbg);
+    padding: 2% 3%;
+    border-radius: 10px;
+    border: 2px solid var(--lightblack);
+    margin-right: 2%;
+
+}
+.landings > .content > .logoL {
+    width: 100%;
+}
+.landings > .content > .logoL > h5{
+    color: var(--gray);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 3%;
+}
+
+.landings > .content > .logoL > .content2{
+    width: 100%;
+}
+.landings > .content > .logoL > .content2 > h2{
+    color: var(--gray);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.landings > .content > .logoL > .content2 p{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: orangered;
+    margin-bottom: 3%;
+}
+
+.landings > .content > .logoL > .content2 > .meaning1{
+    color: var(--gray);
+    font-family: var(--fontfamily);
+    text-align: center;
+    font-size: 18px;
+}
