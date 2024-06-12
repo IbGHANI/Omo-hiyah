@@ -252,6 +252,7 @@
         padding: 3% 3%;
         max-width: 100%;
         min-height: 250vh;
+       
     }
     .services .containers{
         width: 100%;
@@ -274,11 +275,12 @@
     .pillers{
         padding: 2% 2%;
         max-width: 100%;
-        min-height: 310vh;
+        min-height: 320vh;
+        border-bottom: 1px solid var(--lightgreen);
     }
     .pillers .pillers-containers{
         width: 100%;
-        min-height: 300vh;
+        min-height: 315vh;
     }
     .pillers > .headings > h1{
         font-size: 25px;
@@ -291,9 +293,6 @@
         height: 24rem;
     }
 
-
-
-    
     .section{
         padding: 2% 2%;
         max-width: 100%;
