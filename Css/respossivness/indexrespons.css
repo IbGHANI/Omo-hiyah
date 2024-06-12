@@ -211,11 +211,11 @@
     .about > .pic{
         width: 100%;
     }
+
     .services{
-        padding: 3% 2%;
+        padding: 2% 2%;
         max-width: 100%;
-        min-height: 210vh;
-     
+        min-height: 230vh;
     }
     .services .containers{
         width: 100%;
@@ -225,14 +225,17 @@
     .services > .headings > h1{
         font-size: 23px;
     }
+    .services .containers > .box{
+        margin-bottom: 20%;
+    }
   
     .services2{
         max-width: 100%;
-        min-height: 260vh;
+        min-height: 275vh;
     }
     .services2 > .containers{ 
         width: 100%;
-        min-height: 250vh;
+        min-height: 280vh;
     }
 
     .landing{
@@ -240,7 +243,7 @@
         display: block;
         padding: 5px;
         min-height: 30vh;
-        background-color: red;
+  
     }
     .slide-container1.active,
     .slide-container2.active,
@@ -478,23 +481,20 @@
     .about > .pic{
         width: 100%;
     }
-   .services{
+   /* .services{
         padding: 3% 2%;
         max-width: 100%;
         min-height: 210vh;
-        background-color: red;
     }
     .services .containers{
         width: 100%;
         min-height: 260vh;
-        background-color: black;
     }
     .services > .headings > h1{
         font-size: 24px;
     }
     .services > .containers > .box{
         padding: 3% 4%;
-     
     }
     
     .services > .containers > .box > .image img{
@@ -508,13 +508,15 @@
         border-bottom: 1px solid var(--lightgreen);
     }
 
+    .services .containers > .box{
+        margin-bottom: 0;
+    } */
 
     .landing{
         width: 100%;
         display: block;
         padding: 5px;
         min-height: 30vh;
-        background-color: red;
     }
     .slide-container1.active,
     .slide-container2.active,
