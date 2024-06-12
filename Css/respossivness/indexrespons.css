@@ -224,8 +224,11 @@
     .services > .headings > h1{
         font-size: 23px;
     }
-    .services .containers > .box{
+    .services .containers > .box {
         margin-bottom: 3%;
+    }
+    .services .containers > .box > .text > h3{
+        font-size: 20px;
     }
     .services > .containers > .box > .image img{
         width: 21rem;
@@ -247,6 +250,9 @@
     .pillers .pillers-containers > .boxs{
         margin-bottom: 3%;
     }
+    .pillers .pillers-containers > .boxs > .text > h3{
+        font-size: 20px;
+    }
     .pillers > .pillers-containers > .boxs > .image img{
         width: 20rem;
         height: 20rem;
@@ -256,7 +262,6 @@
         padding: 2% 2%;
         max-width: 100%;
         min-height: 240vh;
-
     }
     .section > .section-containers{
         width: 100%;
@@ -267,6 +272,9 @@
     }
     .section > .section-containers > .boxs{
         margin-bottom: 3%;
+    }
+    .section > .section-containers > .boxs > .text > h3{
+        font-size: 20px;
     }
     .section > .section-containers > .boxs > .image img{
         width: 20rem;
