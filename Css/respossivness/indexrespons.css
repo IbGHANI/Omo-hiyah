@@ -154,6 +154,9 @@
         background-color: 	#242526;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+    .dropdown > #listItem{
+        margin-left: 6px;
+    }
     .dropdown ul > li > a{
         color: var(--gray);
     }
@@ -212,6 +215,23 @@
         width: 100%;
     }
 
+    .about > .pic > img{
+        width: 43%;
+        border: none;
+        margin: 5px;
+        border-radius: 10px;
+        object-fit: contain;
+    }
+    .about > .pic > :first-child{
+        border-radius: 10px;
+        border: none;
+        box-shadow: none;
+    }
+    .about > .pic > :last-child{
+        border-radius: 10px;
+        border: none;
+        box-shadow: none;
+    }
     .services{
         padding: 2% 2%;
         max-width: 100%;
@@ -228,7 +248,7 @@
         margin-bottom: 3%;
     }
     .services .containers > .box > .text > h3{
-        font-size: 20px;
+        font-size: 17px;
     }
     .services > .containers > .box > .image img{
         width: 21rem;
@@ -252,7 +272,7 @@
         margin-bottom: 3%;
     }
     .section > .section-containers > .boxs > .text > h3{
-        font-size: 20px;
+        font-size: 17px;
     }
     .section > .section-containers > .boxs > .image img{
         width: 20rem;

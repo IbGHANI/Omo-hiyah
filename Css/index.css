@@ -227,6 +227,7 @@ html{
 .dropdown > #listItem{
     color: var(--gray);
     font-family: var(--fontfamily);
+    text-transform: var(--texttranform);
 }
 
 .dropdown ul li{
