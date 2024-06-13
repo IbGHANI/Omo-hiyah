@@ -3,265 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
+
     <style>
-        .services{
-    position: relative;
-    width: 100%;
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    display: block;
-    padding: 3% 3%;
-    background-color: var(--ldgreen);
-    border-bottom: 1px solid var(--lightgreen);
-}
-.pillers{
-    min-height: 150vh;
+    background-color: #f4f4f4;
 }
 
-.services > .headings > h1,
-.pillers > .headings > h1{
-    text-align: center;
-    font-family: var(--fontfamily);
-    font-size: 2.1rem;
-    text-transform: var(--texttranform);
-    color: var(--darkgreen);
-    letter-spacing: var(--letterspacing);
-    margin-bottom: 5%;
-}
-
-.services .containers{
-    width: 100%;
-    height: 60vh;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-}
-.pillers > .pillers-containers{
-    width: 100%;
-    height: 60vh;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-.services > .containers > .box{
-    background-color: #B2D3C2;
-    display: block;
-    flex-basis: 10px;
-    width: 120%;
-    /* padding: 2%; */
-    box-shadow: 1px 1px 2px var(--green);
+.gallery-item {
+    overflow: hidden;
     border-radius: 10px;
-    margin-bottom: 2%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.pillers > .pillers-containers > .boxs{
-    background-color: #B2D3C2;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    flex-basis: 10px;
-    width: 120%;
-    /* padding: 2%; */
-    box-shadow: 1px 1px 2px var(--green);
-    border-radius: 10px;
-    margin-bottom: 2%;
+    transition: transform 0.3s ease;
 }
 
-.services > .containers > .box > .image img{
-    width: 17rem;
-    height: 17rem;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 1px 1px 2px var(--green);
-    margin-bottom: 10%;
-
-}
-.pillers > .pillers-containers > .boxs > .image img{
-    width: 17rem;
-    height: 17rem;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 1px 1px 2px var(--green);
-    margin-bottom: 10%;
-
+.gallery-item:hover img {
+    transform: scale(1.1);
 }
 
-.services > .containers > .box > .text > h3{
-    text-align: center;
-    color: var(--darkgreen);
-    font-family: var(--fontfamily);
-    text-transform: var(--texttranform);
-    font-weight: bolder;
-    padding: 5px;
-    background: var(--darkgreen);
-    color: var(--gray);
-    margin-bottom: 6%;
-}
 
-.pillers > .pillers-containers > .boxs > .text > h3{
-    text-align: center;
-    color: var(--darkgreen);
-    font-family: var(--fontfamily);
-    text-transform: var(--texttranform);
-    font-weight: bolder;
-    padding: 5px;
-    background: var(--darkgreen);
-    color: var(--gray);
-    margin-bottom: 6%;
-}
-
-.services > .containers > .box > .text{
-    width: 100%;
-    text-align: center;
-}
-.services > .containers > .box > .text > h3{
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-}
-
-        
-
-@media only screen and (max-width: 896px){
-
-    .services{
-        padding: 2% 2%;
-        max-width: 100%;
-        min-height: 240vh;
-        background-color: red;
-    }
-    .services .containers{
-        width: 100%;
-        min-height: 230vh;
-        background-color: black;
-    
-    }
-    .services > .headings > h1{
-        font-size: 23px;
-    }
-    .services .containers > .box{
-        margin-bottom: 0;
-    }
-    .services > .containers > .box > .image img{
-        width: 21rem;
-        height: 21rem;
-    }
-    
-    .pillers{
-        max-width: 100%;
-        min-height: 255vh;
-        background-color: red;
-    }
-    .pillers > .pillers-containers{
-        width: 100%;
-        min-height: 255vh;
-    }
-    
-
-  }
     </style>
 </head>
 <body>
-    <section class="services" id="services">
-        <div class="headings">
-          <h1 class="head">our services</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="../Image/1.jpg" alt="Image 1">
         </div>
-        <div class="containers">
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/quran.jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>QUR’ĀNIC MEMORIZATION</h3>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/arabiah.jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>INTENSIVE ARABIC CLASS</h3>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/clubs.jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>CLUBS AND SOCIETIES</h3>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/1.jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>JUMMA'AT PRAYER</h3>
-                </div>
-            </div>
+        <div class="gallery-item">
+            <img src="../Image/21.jpeg" alt="Image 2">
         </div>
-    </section>
-
-
-    <section class=" pillers of islam" id="pillers">
-        <div class="headings">
-          <h1 class="head">pillers of islam</h1>
+        <div class="gallery-item">
+            <img src="../Image/PNG image 3.png" alt="Image 3">
         </div>
-        <div class="pillers-containers">
-            <div class="boxs">
-                <div class="image">
-                    <img src="./Image/1 (1).jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>shahada</h3>
-                    <p></p>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/2 (1).jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>solah</h3>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/quran.jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>sawm</h3>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/4 (1).jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>zakaah</h3>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="./Image/5.jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>hajj</h3>
-                </div>
-            </div>
+        <div class="gallery-item">
+            <img src="../Image/IMG-20240604-WA0091.jpg" alt="Image 4">
         </div>
-    </section>
-
-
+        <div class="gallery-item">
+            <img src="../Image/PNG image 3.png" alt="Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="../Image/PNG image 3.png" alt="Image 6">
+        </div>
+    </div>
 </body>
 </html>
