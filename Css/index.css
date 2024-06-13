@@ -512,86 +512,6 @@ html{
 
 
 
-
-
-
-
-
-.pillers{
-    position: relative;
-    width: 100%;
-    min-height: 150vh;
-    display: block;
-    padding: 3% 3%;
-    background-color: var(--ldgreen);
-    border-bottom: 1px solid var(--lightgreen);
-}
-
-
-.pillers > .headings > h1{
-    text-align: center;
-    font-family: var(--fontfamily);
-    font-size: 2.1rem;
-    text-transform: var(--texttranform);
-    color: var(--darkgreen);
-    letter-spacing: var(--letterspacing);
-    margin-bottom: 5%;
-}
-
-.pillers .pillers-containers{
-    width: 100%;
-    height: 60vh;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.pillers > .pillers-containers > .boxs{
-    background-color: #B2D3C2;
-    display: block;
-    flex-basis: 10px;
-    width: 120%;
-    /* padding: 2%; */
-    box-shadow: 1px 1px 2px var(--green);
-    border-radius: 10px;
-    margin-bottom: 2%;
-}
-
-.pillers > .pillers-containers > .boxs > .image img{
-    width: 17rem;
-    height: 17rem;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 1px 1px 2px var(--green);
-    margin-bottom: 10%;
-
-}
-
-.pillers > .pillers-containers > .boxs > .text > h3{
-    text-align: center;
-    color: var(--darkgreen);
-    font-family: var(--fontfamily);
-    text-transform: var(--texttranform);
-    font-weight: bolder;
-    padding: 5px;
-    background: var(--darkgreen);
-    color: var(--gray);
-    margin-bottom: 6%;
-}
-
-.pillers > .pillers-containers > .boxs > .text{
-    width: 100%;
-    text-align: center;
-}
-.pillers > .pillers-containers > .boxs > .text > h3{
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-}
-
-
 .section{
     position: relative;
     width: 100%;
@@ -666,6 +586,12 @@ html{
     text-align: center;
     font-size: 1rem;
 }
+
+
+
+
+
+
 
 
 .landing {
@@ -784,6 +710,84 @@ html{
 
 
 
+
+
+.pillers{
+    position: relative;
+    width: 100%;
+    min-height: 150vh;
+    display: block;
+    padding: 3% 3%;
+    background-color: var(--ldgreen);
+    border-bottom: 1px solid var(--lightgreen);
+}
+
+
+.pillers > .headings > h1{
+    text-align: center;
+    font-family: var(--fontfamily);
+    font-size: 2.1rem;
+    text-transform: var(--texttranform);
+    color: var(--darkgreen);
+    letter-spacing: var(--letterspacing);
+    margin-bottom: 5%;
+}
+
+.pillers .pillers-containers{
+    width: 100%;
+    height: 60vh;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pillers > .pillers-containers > .boxs{
+    background-color: #B2D3C2;
+    display: block;
+    flex-basis: 10px;
+    width: 120%;
+    /* padding: 2%; */
+    box-shadow: 1px 1px 2px var(--green);
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+.pillers > .pillers-containers > .boxs > .image img{
+    width: 17rem;
+    height: 17rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 2px var(--green);
+    margin-bottom: 10%;
+
+}
+
+.pillers > .pillers-containers > .boxs > .text > h3{
+    text-align: center;
+    color: var(--darkgreen);
+    font-family: var(--fontfamily);
+    text-transform: var(--texttranform);
+    font-weight: bolder;
+    padding: 5px;
+    background: var(--darkgreen);
+    color: var(--gray);
+    margin-bottom: 6%;
+}
+
+.pillers > .pillers-containers > .boxs > .text{
+    width: 100%;
+    text-align: center;
+}
+.pillers > .pillers-containers > .boxs > .text > h3{
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
 .landings {
     overflow: hidden;
     width: 100%;
@@ -838,3 +842,138 @@ html{
     text-align: center;
     font-size: 18px;
 }
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 50vh;
+    padding: 1% 3%;
+    background-color: #166d3b;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.details{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.box_details{
+    width: 21%;
+    margin-right: 5%;
+}
+.footer > .details > .box_details > .toTeach{
+    color: var(--gray);
+}
+#boxdetails{
+    margin-right: -2%;
+}
+#boxdetails a{
+    display: block;
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: 2%;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+#boxdetails a:hover{
+    color: var(--lightgreen);
+    transition: 0.5s;
+}
+
+.box_details > .headings > h1{
+    text-align: center;
+    font-family: var(--fontfamily);
+    font-weight: bolder;
+    text-transform: var(--texttransform);
+    font-size: 18px;
+    letter-spacing: var(--letterspacing);
+    color: var(--gray);
+}
+
+.box_details h1{
+    color: white;
+    font-size: 18px;
+    font-family: var(--fontfamily);
+    font-weight: bolder;
+    text-transform: var(--text-transform);
+    letter-spacing: 2px;
+    margin-bottom: 4%;
+}
+.box_details p{
+    color: rgb(160, 153, 153);
+    font-size: 13px;
+    font-family: var(--fontfamily);
+    text-transform: var(--text-transform);
+    text-align: left;
+    margin-top: 3%;
+}
+
+#contacti > a{
+    display: block;
+    margin-bottom: 5%;
+    color: rgb(160, 153, 153);
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--fontfamily);
+    font-size: 12px;
+    text-transform: var(--text-transform);
+}
+
+#contacti > a > .fa{
+    font-size: 18px;
+    margin-right: 2%;
+}
+#contacti > a:hover{
+    color: var(--lightgreen);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+
+.media{
+    display: flex;
+    margin-top: 3%;
+}
+.media a{
+    margin-right: 3%;
+    font-size: 1.5rem;
+    color: var(--gray);
+    cursor: pointer;
+}
+.media a:hover{
+    color: var(--lightgreen);
+    transition: 0.5s;
+}
+#detailsbox{
+    text-align: justify;
+}
+#detailsbox a{
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.designed-by{
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: var(--ldgreen);
+}
+.designed-by > p{
+    font-family: var(--fontfamily);
+    letter-spacing: var(--letter-spacing);
+    font-size: 1rem;
+    color: var(--darkgreen);
+    margin-left: 5%;
+}
+.designed-by > p > span{
+    color: orange;
+}
+
+

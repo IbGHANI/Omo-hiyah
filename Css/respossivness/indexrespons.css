@@ -235,29 +235,7 @@
         height: 21rem;
     }
 
-    .pillers{
-        padding: 2% 2%;
-        max-width: 100%;
-        min-height: 310vh;
-    }
-    .pillers .pillers-containers{
-        width: 100%;
-        min-height: 300vh;
-    }
-    .pillers > .headings > h1{
-        font-size: 23px;
-    }
-    .pillers .pillers-containers > .boxs{
-        margin-bottom: 3%;
-    }
-    .pillers .pillers-containers > .boxs > .text > h3{
-        font-size: 20px;
-    }
-    .pillers > .pillers-containers > .boxs > .image img{
-        width: 20rem;
-        height: 20rem;
-    }
-
+    
     .section{
         padding: 2% 2%;
         max-width: 100%;
@@ -316,6 +294,30 @@
         object-fit: contain;
     }
 
+    .pillers{
+        padding: 2% 2%;
+        max-width: 100%;
+        min-height: 310vh;
+    }
+    .pillers .pillers-containers{
+        width: 100%;
+        min-height: 300vh;
+    }
+    .pillers > .headings > h1{
+        font-size: 23px;
+    }
+    .pillers .pillers-containers > .boxs{
+        margin-bottom: 3%;
+    }
+    .pillers .pillers-containers > .boxs > .text > h3{
+        font-size: 20px;
+    }
+    .pillers > .pillers-containers > .boxs > .image img{
+        width: 20rem;
+        height: 20rem;
+    }
+
+
     .landings{
         width: 100%;
         display: block;
@@ -326,6 +328,47 @@
         margin-bottom: 7%;
     }
 
+
+
+    .footer{
+        width: 100%;
+        height: 100vh;
+        padding: 2%;
+        display: block;
+    }
+    .footer > .details{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 1% 3%;
+    }
+    .footer > .details > .box_details{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .footer > .details > .box_details > .headings > h1{
+        font-size: 20px;
+    }
+    .footer > .details > .box_details > p{
+        font-size: 15px;
+        text-align: left;
+    }
+    .footer > .details > .box_details > h1{
+        font-size: 17px;
+    }
+    .footer > .details > .box_details > a{
+        font-size: 13px;
+    }
+    .footer > .details > .box_details > .media a{
+        font-size: 15px;
+    }
+    .designed-by{
+        width: 100%;
+    }
+    .designed-by > p{
+        font-size: 13px;
+    }
 
 
 
