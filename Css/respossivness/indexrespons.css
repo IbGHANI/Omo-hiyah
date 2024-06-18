@@ -98,7 +98,7 @@
         z-index: 999;
         background: var(--ldgreen); 
         box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
-        transition: left 0.3s ease;
+        transition: left 0.4s ease;
         padding: 3% 5%;
         display: block;
     }

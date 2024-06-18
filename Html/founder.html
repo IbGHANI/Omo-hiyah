@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital@1&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
-    <script src="./Js/animation.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
@@ -180,11 +179,38 @@
 
 
 
+    <script>
+          function showMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.add('show');
+            document.addEventListener('click', handleOutsideClick);
+        }
 
-    <script src="../Js/mediaFunc.js">
+        function hideMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('show');
+            document.removeEventListener('click', handleOutsideClick);
+        }
+
+        function handleOutsideClick(event) {
+            const navLinks = document.getElementById('navLinks');
+            const showMenuIcon = document.getElementById('showMenu');
+
+            if (!navLinks.contains(event.target) && !showMenuIcon.contains(event.target)) {
+                hideMenu();
+            }
+        }
+
+        const targetElement = document.getElementById('myTarget');
+        if (targetElement) {
+            targetElement.addEventListener('click', hideMenu);
+        }
+    </script>
+
+    <!-- <script src="../Js/mediaFunc.js">
     </script>
     <script src="../Js/animation.js">
     </script>
-    
+     -->
 </body>
 </html>

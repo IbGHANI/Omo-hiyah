@@ -3,71 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-
+    <title>Document</title>
     <style>
-        /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
+        .main-nav.active {
+  display: block !important;
 }
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
+.main-nav {
+  display: none;
 }
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-
     </style>
 </head>
 <body>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="../Image/1.jpg" alt="Image 1">
+    
+
+    <nav class="navbar">
+        <a href="#" class="logo">Logo</a>
+        <ul class="main-nav active">
+            <li>
+                <a href="#" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="../Html/founder.html" class="nav-links">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Contact</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">About</a>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <span>+</span>
         </div>
-        <div class="gallery-item">
-            <img src="../Image/21.jpeg" alt="Image 2">
-        </div>
-        <div class="gallery-item">
-            <img src="../Image/PNG image 3.png" alt="Image 3">
-        </div>
-        <div class="gallery-item">
-            <img src="../Image/IMG-20240604-WA0091.jpg" alt="Image 4">
-        </div>
-        <div class="gallery-item">
-            <img src="../Image/PNG image 3.png" alt="Image 5">
-        </div>
-        <div class="gallery-item">
-            <img src="../Image/PNG image 3.png" alt="Image 6">
-        </div>
-    </div>
+    </nav>
+
+    <script>
+        const navTransition = () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const navLinks = document.querySelectorAll('.nav-links');
+
+
+window.addEventListener('click', function (evt) {
+    if(evt.target.matches('.nav-links') || evt.target.matches('.main-nav') || evt.target.matches(".nav-toggle") || evt.target.closest(".nav-toggle")) {
+      return;
+    }
+    mainNav.classList.remove('active');
+});
+
+navToggle.addEventListener('click', function () {
+    mainNav.classList.toggle('active');
+});
+
+
+};
+
+navTransition();
+    </script>
 </body>
 </html>
