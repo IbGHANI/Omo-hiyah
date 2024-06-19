@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    ScrollReveal().reveal('.header-nav, .contact, .container, .content, .readmore, .box, .boxs, .text  ' , { 
+    ScrollReveal().reveal('.header-nav, .contact, .container, .content, .readmore, .box, .boxs ' , { 
         duration: 1000,
         delay: 250,
         easing: 'ease-in-out',
