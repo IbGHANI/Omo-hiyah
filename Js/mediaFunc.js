@@ -9,7 +9,7 @@ function showMenu() {
 }
 
 function hideMenu() {
-    navLinks.style.left = "-300px";
+    navLinks.style.left = "-250px";
     navLinks.classList.remove("active"); // Remove the "active" class
 }
 

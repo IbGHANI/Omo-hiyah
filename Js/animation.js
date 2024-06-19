@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ScrollReveal().reveal('.logoP, .logoT, .showMenu, .headings' , { 
         duration: 1000,
-        delay: 270,
+        delay: 150,
         easing: 'ease-in-out',
         origin: 'top',
         distance: '60px',
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ScrollReveal().reveal('.header-nav, .contact, .container, .content, .readmore, .box, .boxs ' , { 
         duration: 1000,
-        delay: 250,
+        delay: 150,
         easing: 'ease-in-out',
         origin: 'bottom',
         distance: '60px',
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ScrollReveal().reveal('.pic, .slide-container1, .toTeach, .media' , { 
         duration: 1000,
-        delay: 250,
+        delay: 150,
         easing: 'ease-in-out',
         origin: 'left',
         distance: '60px',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ScrollReveal().reveal('.gallery-item' , { 
         duration: 1000,
-        delay: 250,
+        delay: 150,
         easing: 'ease-in-out',
         origin: 'right',
         distance: '60px',
