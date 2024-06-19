@@ -32,7 +32,7 @@
         <div class="header-nav" id="navLinks">
             <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()" id="hideMenu"></i>
             <ul id="myTarget">
-                <li class="nav-item"><a href="./index.html">home</a></li>
+                <li class="nav-item"><a href="../index.html">home</a></li>
                 <li class="nav-item"><a href="#about">about</a></li>
                 <li><a href="#services">services</a></li>
             
@@ -42,13 +42,13 @@
                     </div>
                     <ul>
                         <li class="nav-item">
-                            <a href="#" class="links">proprietor</a>
+                            <a href="#ustazz" class="links">proprietor</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="links">proprietress</a>
+                            <a href="./proprietress.html" class="links">proprietress</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="links">principal</a>
+                            <a href="./principal.html" class="links">principal</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="links">head-master</a>
@@ -71,7 +71,7 @@
 
     <!-- the landing start here -->
 
-    <section class="about" id="about">
+    <section class="about" id="ustazz">
         <div class="content">
             <img src="../Image/ustazz.jpg" alt="">
 
@@ -128,7 +128,7 @@
 
             <div class="box_details" id="boxdetails">
                 <h1 class="toTeach">useful links</h1>
-                <a href="" class="toTeach"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>home</a>
+                <a href="/index.html" class="toTeach"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>home</a>
                 <a href="#about" class="toTeach"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>about</a>
                 <a href="#services" class="toTeach"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>services</a>
                 <a href="#landing-page" class="toTeach"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>information</a>
@@ -160,7 +160,7 @@
     </section>
 
     <div class="designed-by">
-    <p class="toTeach">Designed By <span>IBGHANI</span> | All  Rights Reserved</p>
+    <p>Designed By <span>IBGHANI</span> | All  Rights Reserved</p>
     </div>
 
 
@@ -178,39 +178,10 @@
 
 
 
-
-    <script>
-          function showMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.add('show');
-            document.addEventListener('click', handleOutsideClick);
-        }
-
-        function hideMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.remove('show');
-            document.removeEventListener('click', handleOutsideClick);
-        }
-
-        function handleOutsideClick(event) {
-            const navLinks = document.getElementById('navLinks');
-            const showMenuIcon = document.getElementById('showMenu');
-
-            if (!navLinks.contains(event.target) && !showMenuIcon.contains(event.target)) {
-                hideMenu();
-            }
-        }
-
-        const targetElement = document.getElementById('myTarget');
-        if (targetElement) {
-            targetElement.addEventListener('click', hideMenu);
-        }
-    </script>
-
-    <!-- <script src="../Js/mediaFunc.js">
+    <script src="../Js/mediaFunc.js">
     </script>
     <script src="../Js/animation.js">
     </script>
-     -->
+    
 </body>
 </html>

@@ -161,6 +161,10 @@ html{
     transition: transform .5s linear;
     
 }
+.landing-page > .header-nav > ul > li > a:active{
+    color: var(--lightgreen);
+
+}
 
 .landing-page > .header-nav > ul > li > a:hover::before{
     transform: scale(1);
@@ -903,6 +907,29 @@ html{
 
 .gallery2 > .gallery-item:hover img {
     transform: scale(1.1);
+}
+
+.gallery > .gallery2 > .readmore{
+    margin-top: 5%;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--darkgreen);
+}
+
+.gallery > .gallery2 > .readmore > a{
+    color: white;
+    font-family: var(--fontfamily);
+    font-size: 17px;
+    text-transform: var(--texttranform);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gallery > .gallery2 >  .readmore:hover{
+    background-color: orange;
+    transition: var(--transition);
 }
 
 

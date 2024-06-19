@@ -1,6 +1,6 @@
 
 
-@media only screen and (max-width: 768px){
+/* @media only screen and (max-width: 768px){
 
 
 
@@ -250,11 +250,11 @@
         font-size: 13px;
     }
 
-}
+} */
 
 /* the media query for iphon here */
 
-/* 
+
 @media only screen and (max-width: 896px) {
 
     
@@ -513,4 +513,4 @@
         font-size: 13px;
     }
 
-} */
+} 
