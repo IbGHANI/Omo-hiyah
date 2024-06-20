@@ -91,9 +91,9 @@
     }
     .landing-page.active > .header-nav{
         position: absolute;
-        left: -300px;
+        left: -500px;
         top: 0;
-        width: 250px;
+        width: 100%;
         height: 110vh;
         z-index: 999;
         background: var(--ldgreen); 
@@ -126,9 +126,9 @@
     }
     .landing-page > .header-nav{
         position: absolute;
-        left: -300px;
+        left: -500px;
         top: 0;
-        width: 250px;
+        width: 100%;
         height: 100vh;
         z-index: 999;
         background: var(--fbg); 

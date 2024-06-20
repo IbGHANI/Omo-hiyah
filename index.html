@@ -65,7 +65,7 @@
         <div class="contact">
             <a href="#">contact us</a>
         </div>
-        <i class="fa fa-align-justify showMenu" aria-hidden="true" onclick="showMenu()" id="showMenu"></i>
+        <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()" id="showMenu"></i>
     </section>
     <!-- header ends -->
 
@@ -421,23 +421,21 @@
 
     <script>
 
-
     var navLinks = document.getElementById("navLinks");
         
         function showMenu(){
-            navLinks.style.left = "0";
+            navLinks.style.left = "0px";
         }
         function hideMenu(){
-            navLinks.style.left = "-300px";
+            navLinks.style.left = "-500px";
         }
 
         var targetElement = document.getElementById("myTarget");
         if (targetElement) {
             targetElement.addEventListener("click", hideMenu);
         }
-    
-    
         
+    
 
     const header = document.getElementById("landing-page");
 
