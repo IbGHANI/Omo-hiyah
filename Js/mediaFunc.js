@@ -2,74 +2,19 @@
 
 
 
+    var navLinks = document.getElementById("navLinks");
+            
+        function showMenu(){
+            navLinks.style.left = "0px";
+        }
+        function hideMenu(){
+            navLinks.style.left = "-500px";
+        }
 
-
-let open = document.querySelector('#showMenu');
-// let close = document.querySelector('.fx-xmark');
-let listItems = document.querySelector('.header-nav');
-
-open.addEventListener('click', () => {
-    listItems.classList.toggle('show');
-    if (open.classList.contains('fa-bars')){
-        open.classList.remove('fa-bars');
-        open.classList.add('fa-xmark');
-        return;
-    }
-    if(open.classList.contians('fa-xmark')){
-        open.classList.remove('fa-xmark');
-        open.classList.add('fa-bars');
-        return;
-    }
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    var targetElement = document.getElementById("myTarget");
+        if (targetElement) {
+            targetElement.addEventListener("click", hideMenu);
+        }
 
 
         // document.addEventListener('click', function(event) {
