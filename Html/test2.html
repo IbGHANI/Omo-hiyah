@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hamburger Menu</title>
+		<!-- font awesome library connect -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+		<style>
+			body {
+				width: 50vw;
+				margin: 10rem auto;
+				background-color: rgba(135, 122, 221, 0.904);
+				color: #fff;
+				font-family: sans-serif;
+				overflow-x: hidden;
+			}
+			header {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 1rem;
+			}
+			.fa-solid {
+				cursor: pointer;
+			}
+			.list-items {
+				position: relative;
+				transform: translateX(100%);
+				opacity: 0;
+				transition: all 2s ease;
+				height: 50vh;
+				background-color: rgba(37, 38, 116, 0.911);
+				display: grid;
+				place-items: center;
+				border-radius: 5px;
+				box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.111);
+			}
+
+			ul {
+				display: grid;
+				place-items: center;
+				gap: 1rem;
+				padding: 0;
+			}
+			li {
+				list-style-type: none;
+			}
+			.show {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			<div class="button">
+				<i id="button" class="fa-solid fa-lg fa-bars"></i>
+			</div>
+		</header>
+
+		<div class="list-items">
+			<ul>
+				<li>Home</li>
+				<li>Home</li>
+				<li>Home</li>
+				<li>Home</li>
+			</ul>
+		</div>
+
+		<script>
+			let open = document.querySelector("#button");
+			let navLinks = document.querySelector("#navLinks");
+			open.addEventListener("click", () => {
+				navLinks.classList.toggle("show");
+				if (open.classList.contains("fa-bars")) {
+					open.classList.remove("fa-bars");
+					open.classList.add("fa-xmark");
+					open.classList.add("fa-flip");
+					setTimeout(() => {
+						open.classList.remove("fa-flip");
+					}, 400);
+					return;
+				}
+				if (open.classList.contains("fa-xmark")) {
+					open.classList.remove("fa-xmark");
+					open.classList.add("fa-bars");
+					open.classList.add("fa-flip");
+					setTimeout(() => {
+						open.classList.remove("fa-flip");
+					}, 400);
+					return;
+				}
+			});
+		</script>
+	</body>
+</html>

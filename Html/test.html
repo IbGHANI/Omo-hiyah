@@ -5,6 +5,465 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+
+
+
+
+
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+:root{
+  
+    --dark: #000;
+    --darkgreen: rgb(9, 77, 9);
+    --black: #333;
+    --gray: #f9f9f9;
+    --darkgray: #676767;
+    --lightblack: #444;
+    --white: #fff;
+    --color: bisque;
+    --green: #2bb573;
+    --lightgreen: #5ed39b;
+    --ldgreen: #ecfff6;
+    --fbg: #0c0b09;
+    --fontfamily: "Kumbh Sans", sans-serif;
+    --fontsize: 18px;
+    --fontrems: 2rem;
+    --fontsmallrem: 1.2rem;
+    --fontsmallsize: 13px;
+    --letterspacing: 1.5px;
+    --texttranform: capitalize;
+    --transition: 0.5s;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+/* lading page styling start here */
+
+.landing-page{
+    position: relative;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2% 3%;
+    background: transparent;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 2px 1px 2px var(--fbg);
+}
+.landing-page.active{
+    position: relative;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2% 3%;
+    background: var(--ldgreen);
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 2px 1px 2px var(--green);
+}
+
+
+.landing-page > .Logo{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.landing-page > .Logo > .logoP > img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.landing-page > .Logo > .logoT{
+    display: block;
+}
+
+.landing-page > .Logo > .logoT > h5{
+    color: var(--color);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsize);
+    letter-spacing: var(--letterspacing);
+    text-transform: var(--texttranform);
+    cursor: pointer;
+
+}
+
+
+.landing-page > .Logo > .logoT > p{
+    color: var(--gray);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsmallsize);
+    text-transform: var(--texttranform);
+    cursor: pointer;
+}
+
+.landing-page > .header-nav{
+    display: flex;
+    align-items: center;
+}
+
+.landing-page > .header-nav > ul{
+    list-style: none;
+    display: flex;
+}
+
+.landing-page > .header-nav > ul > li{
+    margin-right: 13px;
+}
+
+.landing-page > .header-nav > ul > li > a{
+    position: relative;
+    text-decoration: none;
+    color: var(--gray);
+    text-transform: var(--texttranform);
+    font-family: var(--fontfamily);
+    letter-spacing: 1px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.landing-page.active > .header-nav > ul > li > a,
+.landing-page.active > .Logo > .logoT > p,
+.landing-page.active > .header-nav > ul > .dropdown #listItem,
+.landing-page.active > .header-nav > ul > .dropdown ul li a
+{
+    color: var(--fbg);
+}
+.landing-page.active > .Logo > .logoT > h5,
+.landing-page.active > .header-nav > ul > .dropdown ul
+{
+    color: var(--darkgreen);
+}
+
+.landing-page.active > .header-nav > ul > .dropdown ul{
+    background-color: var(--ldgreen);
+}
+
+.landing-page > .header-nav > ul > li > a::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--green);
+    position: absolute;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .5s linear;
+    
+}
+.landing-page > .header-nav > ul > li > a:active{
+    color: var(--lightgreen);
+
+}
+
+.landing-page > .header-nav > ul > li > a:hover::before{
+    transform: scale(1);
+    transform-origin: left;
+    cursor: pointer;
+}
+
+
+
+.landing-page > .contact{
+    width: 100px;
+    background-color: var(--green);
+    text-align: center;
+    padding: 10px;
+
+}
+.landing-page > .contact:hover{
+    background: yellowgreen;
+    transition: .5s;
+}
+.landing-page > .contact:hover a{
+    color: #000;
+/
+}
+
+.landing-page > .contact > a{
+    text-decoration: none;
+    color: #ecfff6;
+    text-transform: var(--texttranform);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsmallsize);
+}
+
+.arrow {
+    margin-left: 5px;
+}
+
+.dropdown ul{
+    display: none;
+    position: absolute;
+    padding: 1% 1%;
+    background-color: #242526;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+}
+/* 
+.landing-page.active > .dropdown ul{
+    position: absolute;
+    padding: 1% 1%;
+    background-color: var(--ldgreen);
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+} */
+
+.dropdown:hover > ul{
+    display: block;
+    transition: var(--transition);
+}
+
+.dropdown > #listItem{
+    color: var(--gray);
+    font-family: var(--fontfamily);
+    text-transform: var(--texttranform);
+}
+
+.dropdown ul li{
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px;
+    text-align: left;
+    color: var(--fbg);
+}
+
+.dropdown ul li a:hover
+{
+    color: var(--lightgreen);
+    transition: var(--transition);
+}
+
+.dropdown ul li > a{
+    position: relative;
+    text-align: left;
+    font-family: var(--fontfamily);
+    font-size: var(--fontsmallsize);
+    color: var(--gray);
+    text-transform: var(--texttranform);  
+    text-decoration: none;
+}
+
+.links{
+  margin-bottom: 8px;
+}
+
+.dropdown ul .dropdown ul {
+    left: 100%;
+    top: 0;
+    display: none;
+}
+
+.dropdown ul .dropdown:hover > ul {
+    display: block;
+}
+
+#hideMenu,
+#showMenu{
+    display: none;
+}
+
+/* header ends here */
+
+
+@media only screen and (max-width: 768px){
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+  
+    --dark: #000;
+    --black: #333;
+    --darkgreen: rgb(9, 77, 9);
+    --gray: #f9f9f9;
+    --darkgray: #676767;
+    --lightblack: #444;
+    --white: #fff;
+    --color: bisque;
+    --green: #2bb573;
+    --lightgreen: #5ed39b;
+    --ldgreen: #ecfff6;
+    --fbg: #0c0b09;
+    --fontfamily: "Kumbh Sans", sans-serif;
+    --fontsize: 18px;
+    --fontsmallsize: 13px;
+    --fontsmallsize2: 12px;
+    --letterspacing: 1.5px;
+    --texttranform: capitalize;
+    --transition: 0.5s;
+    --fontwiegth: bolder;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.landing-page{
+    position: relative;
+    width: 100%;
+    padding:  2% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 1000;
+}
+.landing-page.active{
+    position: relative;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2% 3%;
+    background: var(--ldgreen);
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 2px 1px 2px var(--green);
+}
+
+#showMenu,
+#hideMenu{
+    display: block;
+    font-size: var(--fontsize);
+    color: var(--gray);
+}
+.landing-page.active > #showMenu{
+    color: var(--darkgreen);
+}
+.landing-page.active > .header-nav > #hideMenu{
+    color: var(--darkgreen);
+}
+
+.landing-page > .header-nav > #hideMenu{
+    text-align: right;
+    font-size: var(--fontsize);
+    color: var(--gray);
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.landing-page.active > .header-nav{
+    position: absolute;
+    left: -500px;
+    top: 0;
+    width: 100%;
+    height: 110vh;
+    z-index: 999;
+    background: var(--ldgreen); 
+    box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+    transition: left 0.2s ease;
+    padding: 3% 5%;
+    display: block;
+}
+
+.landing-page > .Logo{
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+.landing-page > .Logo > .logoP > img{
+    width: 30px;
+    height: 30px;
+}
+.landing-page > .Logo > .logoT > h5{
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--color);
+}
+
+.landing-page > .Logo > .logoT > p{
+    font-size: 11px;
+    color: var(--gray);
+}
+.landing-page > .header-nav{
+    position: absolute;
+    left: -500px;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background: var(--fbg); 
+    box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+    transition: all left 0.4s ease;
+    padding: 3% 5%;
+    display: block;
+}
+
+.landing-page > .header-nav > ul {
+    display: block;
+}
+
+.landing-page > .header-nav > ul > li {
+    margin-bottom: 8%;
+}
+.landing-page > .header-nav > ul > li > a
+{
+    color: var(--gray);
+}
+
+.dropdown ul{
+    background-color: 	#242526;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.dropdown > #listItem{
+    margin-left: 6px;
+}
+.dropdown ul > li > a{
+    color: var(--gray);
+}
+
+.landing-page > .contact{
+    display: none;
+}
+
+}
+    </style>
 
 </head>
 <body>
@@ -12,23 +471,76 @@
 
 
 
-<nav>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <div class="menu-icon">
-        
 
-    </div>
-</nav>
+    <section class="landing-page" id="landing-page">
+
+        <div class="Logo">
+            <div class="logoP">
+                <img src="../Image/logo.JPG" alt="">
+            </div>
+
+            <div class="logoT">
+                <h5 class="name">Omo-hiyah</h5>
+                <p class="name">group of schools</p>
+            </div>
+
+        </div>
+
+        <div class="header-nav" id="navLinks">
+            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()" id="hideMenu"></i>
+            <ul id="myTarget">
+                <li class="nav-links"><a href="./index.html">home</a></li>
+                <li class="nav-links"><a href="#about">about</a></li>
+                <li><a href="#services">services</a></li>
+            
+                <li class="dropdown">
+                    <div class="School" id="listItem">
+                        information<i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+                    </div>
+                    <ul id="myTarget">
+                        <li class="nav-links">
+                            <a href="./Html/founder.html" class="links">proprietor</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="./Html/proprietress.html" class="links">proprietress</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="./Html/principal.html" class="links">principal</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#" class="links">head-master</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-links"><a href="#sections">sections</a></li>
+                <li class="nav-links"><a href="#gallery">gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <a href="#">contact us</a>
+        </div>
+        <i class="fa fa-align-justify" aria-hidden="true" onclick="showMenu()" id="showMenu"></i>
+    </section>
 
 
 
+<script>
+    let navLinks = document.getElementById("navLinks");
 
+    function showMenu(){
+        navLinks.style.left = "0px";
+        console.log();
+    }
+    function hideMenu(){
+        navLinks.style.left = "-500px";
+    }
 
+    let target = document.getElementById("myTarget");
+    if (target){
+        target.addEventListener("click", hideMenu());
+    }
+</script>
 
 
 

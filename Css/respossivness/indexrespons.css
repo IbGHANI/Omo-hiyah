@@ -124,6 +124,8 @@
         font-size: 11px;
         color: var(--gray);
     }
+
+
     .landing-page > .header-nav{
         position: absolute;
         left: -500px;

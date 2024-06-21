@@ -2,19 +2,21 @@
 
 
 
-    var navLinks = document.getElementById("navLinks");
-            
-        function showMenu(){
-            navLinks.style.left = "0px";
-        }
-        function hideMenu(){
-            navLinks.style.left = "-500px";
-        }
+let navLinks = document.getElementById("navLinks");
 
-    var targetElement = document.getElementById("myTarget");
-        if (targetElement) {
-            targetElement.addEventListener("click", hideMenu);
-        }
+function showMenu(){
+    navLinks.style.left = "0px";
+}
+function hideMenu(){
+    navLinks.style.left = "-500px";
+}
+
+
+
+let target = document.getElementById("myTarget");
+if (target){
+    target.addEventListener("click", hideMenu());
+}
 
 
         // document.addEventListener('click', function(event) {
