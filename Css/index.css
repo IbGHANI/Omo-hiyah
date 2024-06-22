@@ -105,21 +105,21 @@ html{
     cursor: pointer;
 }
 
-.landing-page > .header-nav{
+.landing-page > .mobile-navigation{
     display: flex;
     align-items: center;
 }
 
-.landing-page > .header-nav > ul{
+.landing-page > .mobile-navigation > ul{
     list-style: none;
     display: flex;
 }
 
-.landing-page > .header-nav > ul > li{
+.landing-page > .mobile-navigation > ul > li{
     margin-right: 13px;
 }
 
-.landing-page > .header-nav > ul > li > a{
+.landing-page > .mobile-navigation > ul > li > a{
     position: relative;
     text-decoration: none;
     color: var(--gray);
@@ -131,24 +131,24 @@ html{
     cursor: pointer;
 }
 
-.landing-page.active > .header-nav > ul > li > a,
+.landing-page.active > .mobile-navigation> ul > li > a,
 .landing-page.active > .Logo > .logoT > p,
-.landing-page.active > .header-nav > ul > .dropdown #listItem,
-.landing-page.active > .header-nav > ul > .dropdown ul li a
+.landing-page.active > .mobile-navigation > ul > .dropdown #listItem,
+.landing-page.active > .mobile-navigation > ul > .dropdown ul li a
 {
     color: var(--fbg);
 }
 .landing-page.active > .Logo > .logoT > h5,
-.landing-page.active > .header-nav > ul > .dropdown ul
+.landing-page.active > .mobile-navigation > ul > .dropdown ul
 {
     color: var(--darkgreen);
 }
 
-.landing-page.active > .header-nav > ul > .dropdown ul{
+.landing-page.active > .mobile-navigation > ul > .dropdown ul{
     background-color: var(--ldgreen);
 }
 
-.landing-page > .header-nav > ul > li > a::before{
+.landing-page > .mobile-navigation > ul > li > a::before{
     content: '';
     width: 100%;
     height: 2px;
@@ -161,18 +161,16 @@ html{
     transition: transform .5s linear;
     
 }
-.landing-page > .header-nav > ul > li > a:active{
+.landing-page > .mobile-navigation > ul > li > a:active{
     color: var(--lightgreen);
 
 }
 
-.landing-page > .header-nav > ul > li > a:hover::before{
+.landing-page > .mobile-navigation > ul > li > a:hover::before{
     transform: scale(1);
     transform-origin: left;
     cursor: pointer;
 }
-
-
 
 .landing-page > .contact{
     width: 100px;
@@ -212,16 +210,6 @@ html{
     z-index: 1;
     list-style: none;
 }
-/* 
-.landing-page.active > .dropdown ul{
-    position: absolute;
-    padding: 1% 1%;
-    background-color: var(--ldgreen);
-    min-width: 150px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    list-style: none;
-} */
 
 .dropdown:hover > ul{
     display: block;
@@ -242,7 +230,7 @@ html{
     color: var(--fbg);
 }
 
-.dropdown ul li a:hover
+.mobile-navigation > .dropdown ul li a:hover
 {
     color: var(--lightgreen);
     transition: var(--transition);
@@ -272,10 +260,84 @@ html{
     display: block;
 }
 
-#hideMenu,
-#showMenu{
+#button{
     display: none;
 }
+/* the new bar style here */
+li {
+    list-style-type: none;
+}
+
+.my-target {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.my-target li {
+    margin-left: 3rem;
+    font-size: 1.4rem;
+}
+
+.my-target li a {
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+.mobile-navigation{
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    padding: 5% 1%;
+    transition: all 850ms ease-in;
+}
+
+.mobile-navigation > .my-Target{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  
+}
+.mobile-navigation ul {
+    align-items: center;
+    margin-top: 10%;
+    background-color: orange;
+
+}
+.mobile-navigation ul li a {
+    width: 100%;
+    background-color: red;
+    margin-bottom: 5%;
+    text-align: center;
+    
+}
+.landing-page.active > .mobile-navigation.active{
+    background-color: var(--ldgreen);
+    transform: translateX(0);
+    opacity: 1;
+}
+.mobile-navigation.active {
+    transform: translateX(0);
+    opacity: 1;
+    background-color: var(--fbg);
+}
+/* the new bar style ends here */
 
 /* header ends here */
 

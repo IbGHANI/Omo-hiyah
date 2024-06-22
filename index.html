@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="./Css/index.css">
     <link rel="stylesheet" href="./Css/respossivness/indexrespons.css">
     <!-- <link rel="stylesheet" href="./Css/respossivness/iphoneresponsive.css"> -->
-    <link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital@1&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
@@ -19,58 +17,61 @@
 </head>
 <body>
     <!-- landing page here -->
-
     <section class="landing-page" id="landing-page">
 
         <div class="Logo">
             <div class="logoP">
                 <img src="../Image/logo.JPG" alt="">
             </div>
-
             <div class="logoT">
                 <h5 class="name">Omo-hiyah</h5>
                 <p class="name">group of schools</p>
             </div>
-
         </div>
 
         <div class="header-nav" id="navLinks">
-            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()" id="hideMenu"></i>
-            <ul id="myTarget">
-                <li class="nav-links"><a href="./index.html">home</a></li>
-                <li class="nav-links"><a href="#about">about</a></li>
-                <li><a href="#services">services</a></li>
-            
+            <i id="button" class="fa-solid fa-bars mobile-menu" aria-hidden="true"></i>
+            <ul id="myTarget" class="my-target">
+
+            </ul>
+        </div>
+
+        <div class="mobile-navigation">
+            <ul id="myTarget" class="my-target">
+                <li class="nav-links"><a href="./index.html">Home</a></li>
+                <li class="nav-links"><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li class="dropdown">
                     <div class="School" id="listItem">
-                        information<i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+                        Information
+                        <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
                     </div>
                     <ul id="">
-                        <li class="nav-links">
-                            <a href="./Html/founder.html" class="links">proprietor</a>
-                        </li>
-                        <li class="nav-links">
-                            <a href="./Html/proprietress.html" class="links">proprietress</a>
-                        </li>
-                        <li class="nav-links">
-                            <a href="./Html/principal.html" class="links">principal</a>
-                        </li>
-                        <li class="nav-links">
-                            <a href="#" class="links">head-master</a>
-                        </li>
-                    </ul>
+                            <li class="nav-links">
+                                <a href="./Html/founder.html" class="links">Proprietor</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="./Html/proprietress.html" class="links">Proprietress</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="./Html/principal.html" class="links">Principal</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="#" class="links">Head-master</a>
+                            </li>
+                        </ul>
                 </li>
-                <li class="nav-links"><a href="#sections">sections</a></li>
-                <li class="nav-links"><a href="#gallery">gallery</a></li>
+                <li class="nav-links"><a href="#sections">Sections</a></li>
+                <li class="nav-links"><a href="#gallery">Gallery</a></li>
             </ul>
         </div>
 
         <div class="contact">
-            <a href="#">contact us</a>
+            <a href="#">Contact us</a>
         </div>
-        <i class="fa fa-align-justify" aria-hidden="true" onclick="showMenu()" id="showMenu"></i>
-				<!-- <i id="button" class="fa-solid fa-lg fa-bars"></i> -->
-    </section>
+
+      
+</section>
     <!-- header ends -->
 
     <!-- landing page here -->
@@ -421,46 +422,59 @@
 
     <script>
 
-            // let open = document.querySelector("#button");
-            // let listItems = document.querySelector("#navLinks");
-			// open.addEventListener("click", () => {
-			// 	listItems.classList.toggle("show");
-			// 	if (open.classList.contains("fa-bars")) {
-			// 		open.classList.remove("fa-bars");
-			// 		open.classList.add("fa-xmark");
-			// 		open.classList.add("fa-flip");
-			// 		setTimeout(() => {
-			// 			open.classList.remove("fa-flip");
-			// 		}, 400);
-			// 		return;
-			// 	}
-			// 	if (open.classList.contains("fa-xmark")) {
-			// 		open.classList.remove("fa-xmark");
-			// 		open.classList.add("fa-bars");
-			// 		open.classList.add("fa-flip");
-			// 		setTimeout(() => {
-			// 			open.classList.remove("fa-flip");
-			// 		}, 400);
-			// 		return;
-			// 	}
-			// });
+           
+			let mobileNav = document.querySelector(".mobile-navigation");
+			let mobileNavButton = document.querySelector(".mobile-menu");
+			mobileNavButton.addEventListener("click", () => {
+				mobileNav.classList.add("active");
+				if (mobileNavButton.classList.contains("fa-bars")) {
+					mobileNavButton.classList.remove("fa-bars");
+					mobileNavButton.classList.add("fa-xmark");
+					mobileNavButton.classList.add("fa-flip");
+					setTimeout(() => {
+						mobileNavButton.classList.remove("fa-flip");
+					}, 400);
+					return;
+				}
+				if (mobileNavButton.classList.contains("fa-xmark")) {
+					mobileNav.classList.remove("active");
+					mobileNavButton.classList.remove("fa-xmark");
+					mobileNavButton.classList.add("fa-bars");
+					mobileNavButton.classList.add("fa-flip");
+					setTimeout(() => {
+						mobileNavButton.classList.remove("fa-flip");
+					}, 400);
+					return;
+				}
+			});
+
+			window.addEventListener("resize", () => {
+				if (window.innerWidth > 800) {
+					mobileNav.classList.remove("active");
+					if (mobileNavButton.classList.contains("fa-xmark")) {
+						mobileNavButton.classList.remove("fa-xmark");
+						mobileNavButton.classList.add("fa-bars");
+						return;
+					}
+				}
+			});
 
 
-        let navLinks = document.getElementById("navLinks");
+        // let navLinks = document.getElementById("navLinks");
     
-        function showMenu(){
-            navLinks.style.left = "0px";
-            console.log();
-        }
-        function hideMenu(){
-            navLinks.style.left = "-500px";
-            console.log();
-        }
+        // function showMenu(){
+        //     navLinks.style.left = "0px";
+        //     console.log();
+        // }
+        // function hideMenu(){
+        //     navLinks.style.left = "-500px";
+        //     console.log();
+        // }
     
-        let target = document.getElementById("myTarget");
-        if (target){
-            target.addEventListener("click", hideMenu);
-        }
+        // let target = document.getElementById("myTarget");
+        // if (target){
+        //     target.addEventListener("click", hideMenu);
+        // }
 
         // scroll reveal on the header 
         const header = document.getElementById("landing-page");

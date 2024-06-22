@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--dark: #000;
+				--darkgreen: rgb(9, 77, 9);
+				--black: #333;
+				--gray: #f9f9f9;
+				--darkgray: #676767;
+				--lightblack: #444;
+				--white: #fff;
+				--color: bisque;
+				--green: #2bb573;
+				--lightgreen: #5ed39b;
+				--ldgreen: #ecfff6;
+				--fbg: #0c0b09;
+				--fontfamily: "Kumbh Sans", sans-serif;
+				--fontsize: 18px;
+				--fontrems: 2rem;
+				--fontsmallrem: 1.2rem;
+				--fontsmallsize: 13px;
+				--letterspacing: 1.5px;
+				--texttranform: capitalize;
+				--transition: 0.5s;
+			}
+
+			html {
+				scroll-behavior: smooth;
+				scroll-padding-top: 6rem;
+				overflow-x: hidden;
+			}
+			body{
+				background-color: black;
+			}
+
+			/* lading page styling start here */
+			.landing-page {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				padding: 2% 3%;
+				background: transparent;
+				position: fixed;
+				z-index: 1000;
+				box-shadow: 2px 1px 2px var(--fbg);
+			}
+			.landing-page.active {
+				background: var(--ldgreen);
+			}
+
+			.landing-page .logo {
+				width: 15%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+			}
+
+			.landing-page .logo .logoP img {
+				width: 42px;
+				height: 42px;
+				border-radius: 50%;
+				margin-right: 10px;
+				object-fit: contain;
+				cursor: pointer;
+			}
+
+			.landing-page .logo .logoT {
+				display: block;
+			}
+
+			.landing-page .logo .logoT h5 {
+				color: var(--color);
+				font-family: var(--fontfamily);
+				font-size: var(--fontsize);
+				letter-spacing: var(--letterspacing);
+				text-transform: var(--texttranform);
+				cursor: pointer;
+			}
+
+			.landing-page .logo .logoT p {
+				color: var(--gray);
+				font-family: var(--fontfamily);
+				font-size: var(--fontsmallsize);
+				text-transform: var(--texttranform);
+				cursor: pointer;
+			}
+			
+
+			/* media responsive end here */
+			li {
+				list-style-type: none;
+			}
+
+			.my-target {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex: 1;
+			}
+
+			.my-target li {
+				margin-left: 3rem;
+				font-size: 1.4rem;
+			}
+
+			.my-target li a {
+				text-decoration: none;
+			}
+
+			.mobile-menu {
+				display: none;
+			}
+
+			.mobile-navigation {
+				position: fixed;
+				top: 100px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				transform: translateX(100%);
+				opacity: 0;
+				background-color: rgba(39, 8, 8, 0.26);
+				width: 100vw;
+				height: 100vh;
+				display: grid;
+
+				/* place-items: center; */
+				font-size: 1.3rem;
+				transition: all 850ms ease-in;
+				color: #fff;
+			}
+
+			.mobile-navigation ul li {
+				width: 100%;
+				padding: 10px;
+				margin: 2rem;
+			}
+			.mobile-navigation ul li a {
+				background-color: white;
+				
+				text-align: center;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.mobile-navigation.active {
+				transform: translateX(0);
+				opacity: 1;
+				background-color: rgba(161, 36, 36, 0.856);
+			}
+			@media (max-width: 800px) {
+				.mobile-menu {
+					display: block;
+					color: white;
+				}
+				.my-target,
+				.contact {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- header start here -->
+
+		<section class="landing-page" id="landing-page">
+			<div class="logo">
+				<div class="logoP">
+					<img src="../Image/logo.JPG" alt="" />
+				</div>
+				<div class="logoT">
+					<h5 class="name">Omo-hiyah</h5>
+					<p class="name">group of schools</p>
+				</div>
+			</div>
+
+			<div class="header-nav" id="navLinks">
+				<i id="button" class="fa-solid fa-bars mobile-menu" aria-hidden="true"></i>
+				<ul id="myTarget" class="my-target">
+					<li class="nav-links"><a href="./index.html">Home</a></li>
+					<li class="nav-links"><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+
+					<li class="dropdown">
+						<div class="School" id="listItem">
+							Information
+							<i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+						</div>
+						<!-- <ul id="">
+							<li class="nav-links">
+								<a href="./Html/founder.html" class="links">Proprietor</a>
+							</li>
+							<li class="nav-links">
+								<a href="./Html/proprietress.html" class="links"
+									>Proprietress</a
+								>
+							</li>
+							<li class="nav-links">
+								<a href="./Html/principal.html" class="links">Principal</a>
+							</li>
+							<li class="nav-links">
+								<a href="#" class="links">Head-master</a>
+							</li>
+						</ul> -->
+					</li>
+					<li class="nav-links"><a href="#sections">Sections</a></li>
+					<li class="nav-links"><a href="#gallery">Gallery</a></li>
+				</ul>
+			</div>
+
+			<div class="mobile-navigation">
+				<ul>
+					<li class="nav-links"><a href="./index.html">Home</a></li>
+					<li class="nav-links"><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li class="dropdown">
+						<div class="School" id="listItem">
+							Information
+							<i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+						</div>
+						<!-- <ul id="">
+                                <li class="nav-links">
+                                    <a href="./Html/founder.html" class="links">Proprietor</a>
+                                </li>
+                                <li class="nav-links">
+                                    <a href="./Html/proprietress.html" class="links"
+                                        >Proprietress</a
+                                    >
+                                </li>
+                                <li class="nav-links">
+                                    <a href="./Html/principal.html" class="links">Principal</a>
+                                </li>
+                                <li class="nav-links">
+                                    <a href="#" class="links">Head-master</a>
+                                </li>
+                            </ul> -->
+					</li>
+					<li class="nav-links"><a href="#sections">Sections</a></li>
+					<li class="nav-links"><a href="#gallery">Gallery</a></li>
+				</ul>
+			</div>
+
+			<div class="contact">
+				<a href="#">Contact us</a>
+			</div>
+			<!-- <i
+				class="fa fa-align-justify"
+				aria-hidden="true"
+				onclick="showMenu()"
+				id="showMenu"></i> -->
+		</section>
+		<!-- header ends -->
+
+		<script>
+			// help me writh the functions here pls sir thank you i really appreciate sir inshaallah you shall marry mashaallah wife and the one that love you most.
+
+			let mobileNav = document.querySelector(".mobile-navigation");
+			let mobileNavButton = document.querySelector(".mobile-menu");
+			mobileNavButton.addEventListener("click", () => {
+				mobileNav.classList.add("active");
+				if (mobileNavButton.classList.contains("fa-bars")) {
+					mobileNavButton.classList.remove("fa-bars");
+					mobileNavButton.classList.add("fa-xmark");
+					mobileNavButton.classList.add("fa-flip");
+					setTimeout(() => {
+						mobileNavButton.classList.remove("fa-flip");
+					}, 400);
+					return;
+				}
+				if (mobileNavButton.classList.contains("fa-xmark")) {
+					mobileNav.classList.remove("active");
+					mobileNavButton.classList.remove("fa-xmark");
+					mobileNavButton.classList.add("fa-bars");
+					mobileNavButton.classList.add("fa-flip");
+					setTimeout(() => {
+						mobileNavButton.classList.remove("fa-flip");
+					}, 400);
+					return;
+				}
+			});
+
+			window.addEventListener("resize", () => {
+				if (window.innerWidth > 800) {
+					mobileNav.classList.remove("active");
+					if (mobileNavButton.classList.contains("fa-xmark")) {
+						mobileNavButton.classList.remove("fa-xmark");
+						mobileNavButton.classList.add("fa-bars");
+						return;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
