@@ -1,60 +1,55 @@
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    let mobileNav = document.querySelector(".mobile-navigation");
+    let mobileNavButton = document.querySelector(".mobile-menu");
+    
+    // Function to toggle mobile navigation
+    function toggleMobileNav() {
+        mobileNav.classList.toggle("active");
 
+        // Toggle icon between bars and xmark
+        if (mobileNavButton.classList.contains("fa-bars")) {
+            mobileNavButton.classList.remove("fa-bars");
+            mobileNavButton.classList.add("fa-xmark");
+            mobileNavButton.classList.add("fa-flip");
+            setTimeout(() => {
+                mobileNavButton.classList.remove("fa-flip");
+            }, 400);
+        } else if (mobileNavButton.classList.contains("fa-xmark")) {
+            mobileNavButton.classList.remove("fa-xmark");
+            mobileNavButton.classList.add("fa-bars");
+            mobileNavButton.classList.add("fa-flip");
+            setTimeout(() => {
+                mobileNavButton.classList.remove("fa-flip");
+            }, 400);
+        }
+    }
 
-let navLinks = document.getElementById("navLinks");
+    // Event listener for mobile menu button
+    mobileNavButton.addEventListener("click", toggleMobileNav);
 
-function showMenu(){
-    navLinks.style.left = "0px";
-}
-function hideMenu(){
-    navLinks.style.left = "-500px";
-}
+    // Event listener for navigation links to close the menu
+    let navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+            toggleMobileNav();
+        });
+    });
 
+    // Event listener for window resize to close menu if window width > 800px
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 800) {
+            mobileNav.classList.remove("active");
+            if (mobileNavButton.classList.contains("fa-xmark")) {
+                mobileNavButton.classList.remove("fa-xmark");
+                mobileNavButton.classList.add("fa-bars");
+            }
+        }
+    });
+});
 
-
-let target = document.getElementById("myTarget");
-if (target){
-    target.addEventListener("click", hideMenu());
-}
-
-
-        // document.addEventListener('click', function(event) {
-        //         var isClickInsideNav = navLinks.contains(event.target);
-        //         var isClickOnShowMenuButton = document.getElementById("showMenu").contains(event.target);
-                        
-        //             if (!isClickInsideNav && !isClickOnShowMenuButton) {
-        //                 hideMenu();
-        //             }
-        //         });  
-
-    // var navLinks = document.getElementById("navLinks");
-
-    // function showMenu() {
-    //     navLinks.style.left = "0";
-    //     navLinks.classList.add("active"); // Add the "active" class to handle the display
-    // }
-
-    // function hideMenu() {
-    //     navLinks.style.left = "-300px";
-    //     navLinks.classList.remove("active"); // Remove the "active" class
-    // }
-
-
-    // document.addEventListener('click', function(event) {
-    //     var isClickInsideNav = navLinks.contains(event.target);
-    //     var isClickOnShowMenuButton = document.getElementById("showMenu").contains(event.target);
-                
-    //         if (!isClickInsideNav && !isClickOnShowMenuButton) {
-    //             hideMenu();
-    //         }
-    //     });  
-
-
-    // var targetElement = document.getElementById("yourTarget");
-    //         if (targetElement) {
-    //             targetElement.addEventListener("click", hideMenu);
-    //         }
+       
         
     const header = document.getElementById("landing-page");
 

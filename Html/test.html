@@ -4,464 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../Css/testing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <style>
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: black;
-        }
-
-
-        :root{
-        
-            --dark: #000;
-            --darkgreen: rgb(9, 77, 9);
-            --black: #333;
-            --gray: #f9f9f9;
-            --darkgray: #676767;
-            --lightblack: #444;
-            --white: #fff;
-            --color: bisque;
-            --green: #2bb573;
-            --lightgreen: #5ed39b;
-            --ldgreen: #ecfff6;
-            --fbg: #0c0b09;
-            --fontfamily: "Kumbh Sans", sans-serif;
-            --fontsize: 18px;
-            --fontrems: 2rem;
-            --fontsmallrem: 1.2rem;
-            --fontsmallsize: 13px;
-            --letterspacing: 1.5px;
-            --texttranform: capitalize;
-            --transition: 0.5s;
-        }
-
-
-        html{
-            scroll-behavior: smooth;
-            scroll-padding-top: 6rem;
-            overflow-x: hidden;
-        }
-
-
-        /* lading page styling start here */
-
-        .landing-page{
-            position: relative;
-            display: flex;  
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 2% 3%;
-            background: transparent;
-            position: fixed;
-            z-index: 1000;
-            box-shadow: 2px 1px 2px var(--fbg);
-        }
-        .landing-page.active{
-            position: relative;
-            display: flex;  
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 2% 3%;
-            background: var(--ldgreen);
-            position: fixed;
-            z-index: 1000;
-            box-shadow: 2px 1px 2px var(--green);
-        }
-
-
-        .landing-page > .Logo{
-            width: 15%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .landing-page > .Logo > .logoP > img{
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            margin-right: 10px;
-            object-fit: contain;
-            cursor: pointer;
-        }
-
-        .landing-page > .Logo > .logoT{
-            display: block;
-        }
-
-        .landing-page > .Logo > .logoT > h5{
-            color: var(--color);
-            font-family: var(--fontfamily);
-            font-size: var(--fontsize);
-            letter-spacing: var(--letterspacing);
-            text-transform: var(--texttranform);
-            cursor: pointer;
-
-        }
-
-
-        .landing-page > .Logo > .logoT > p{
-            color: var(--gray);
-            font-family: var(--fontfamily);
-            font-size: var(--fontsmallsize);
-            text-transform: var(--texttranform);
-            cursor: pointer;
-        }
-
-        .landing-page > .header-nav{
-            display: flex;
-            align-items: center;
-        }
-
-        .landing-page > .header-nav > ul{
-            list-style: none;
-            display: flex;
-        }
-
-        .landing-page > .header-nav > ul > li{
-            margin-right: 13px;
-        }
-
-        .landing-page > .header-nav > ul > li > a{
-            position: relative;
-            text-decoration: none;
-            color: var(--gray);
-            text-transform: var(--texttranform);
-            font-family: var(--fontfamily);
-            letter-spacing: 1px;
-            padding: 8px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .landing-page.active > .header-nav > ul > li > a,
-        .landing-page.active > .Logo > .logoT > p,
-        .landing-page.active > .header-nav > ul > .dropdown #listItem,
-        .landing-page.active > .header-nav > ul > .dropdown ul li a
-        {
-            color: var(--fbg);
-        }
-        .landing-page.active > .Logo > .logoT > h5,
-        .landing-page.active > .header-nav > ul > .dropdown ul
-        {
-            color: var(--darkgreen);
-        }
-
-        .landing-page.active > .header-nav > ul > .dropdown ul{
-            background-color: var(--ldgreen);
-        }
-
-        .landing-page > .header-nav > ul > li > a::before{
-            content: '';
-            width: 100%;
-            height: 2px;
-            left: 0;
-            bottom: 0;
-            background-color: var(--green);
-            position: absolute;
-            transform: scale(0);
-            transform-origin: right;
-            transition: transform .5s linear;
-            
-        }
-        .landing-page > .header-nav > ul > li > a:active{
-            color: var(--lightgreen);
-
-        }
-
-        .landing-page > .header-nav > ul > li > a:hover::before{
-            transform: scale(1);
-            transform-origin: left;
-            cursor: pointer;
-        }
-
-
-
-        .landing-page > .contact{
-            width: 100px;
-            background-color: var(--green);
-            text-align: center;
-            padding: 10px;
-
-        }
-        .landing-page > .contact:hover{
-            background: yellowgreen;
-            transition: .5s;
-        }
-        .landing-page > .contact:hover a{
-            color: #000;
-        /
-        }
-
-        .landing-page > .contact > a{
-            text-decoration: none;
-            color: #ecfff6;
-            text-transform: var(--texttranform);
-            font-family: var(--fontfamily);
-            font-size: var(--fontsmallsize);
-        }
-
-        .arrow {
-            margin-left: 5px;
-        }
-
-        .dropdown ul{
-            display: none;
-            position: absolute;
-            padding: 1% 1%;
-            background-color: #242526;
-            min-width: 150px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            list-style: none;
-        }
-        /* 
-        .landing-page.active > .dropdown ul{
-            position: absolute;
-            padding: 1% 1%;
-            background-color: var(--ldgreen);
-            min-width: 150px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            list-style: none;
-        } */
-
-        .dropdown:hover > ul{
-            display: block;
-            transition: var(--transition);
-        }
-
-        .dropdown > #listItem{
-            color: var(--gray);
-            font-family: var(--fontfamily);
-            text-transform: var(--texttranform);
-        }
-
-        .dropdown ul li{
-            display: block;
-            margin-bottom: 8px;
-            padding: 8px;
-            text-align: left;
-            color: var(--fbg);
-        }
-
-        .dropdown ul li a:hover
-        {
-            color: var(--lightgreen);
-            transition: var(--transition);
-        }
-
-        .dropdown ul li > a{
-            position: relative;
-            text-align: left;
-            font-family: var(--fontfamily);
-            font-size: var(--fontsmallsize);
-            color: var(--gray);
-            text-transform: var(--texttranform);  
-            text-decoration: none;
-        }
-
-        .links{
-        margin-bottom: 8px;
-        }
-
-        .dropdown ul .dropdown ul {
-            left: 100%;
-            top: 0;
-            display: none;
-        }
-
-        .dropdown ul .dropdown:hover > ul {
-            display: block;
-        }
-
-        #hideMenu,
-        #showMenu{
-            display: none;
-        }
-
-        /* header ends here */
-
-        /* media responsive start here */
-
-    @media only screen and (max-width: 768px){
-
-
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        :root{
-        
-            --dark: #000;
-            --black: #333;
-            --darkgreen: rgb(9, 77, 9);
-            --gray: #f9f9f9;
-            --darkgray: #676767;
-            --lightblack: #444;
-            --white: #fff;
-            --color: bisque;
-            --green: #2bb573;
-            --lightgreen: #5ed39b;
-            --ldgreen: #ecfff6;
-            --fbg: #0c0b09;
-            --fontfamily: "Kumbh Sans", sans-serif;
-            --fontsize: 18px;
-            --fontsmallsize: 13px;
-            --fontsmallsize2: 12px;
-            --letterspacing: 1.5px;
-            --texttranform: capitalize;
-            --transition: 0.5s;
-            --fontwiegth: bolder;
-        }
-
-
-        html{
-            scroll-behavior: smooth;
-            scroll-padding-top: 6rem;
-            overflow-x: hidden;
-        }
-
-        .landing-page{
-            position: relative;
-            width: 100%;
-            padding:  2% 3%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: transparent;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            position: fixed;
-            z-index: 1000;
-        }
-        .landing-page.active{
-            position: relative;
-            display: flex;  
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 2% 3%;
-            background: var(--ldgreen);
-            position: fixed;
-            z-index: 1000;
-            box-shadow: 2px 1px 2px var(--green);
-        }
-
-       
-     
-
-        .landing-page > .Logo{
-            width: 50%;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-
-        }
-        .landing-page > .Logo > .logoP > img{
-            width: 30px;
-            height: 30px;
-        }
-        .landing-page > .Logo > .logoT > h5{
-            font-size: 16px;
-            font-weight: bolder;
-            color: var(--color);
-        }
-
-        .landing-page > .Logo > .logoT > p{
-            font-size: 11px;
-            color: var(--gray);
-        }
-     
-
-        .landing-page > .mobile-navigation > ul {
-            list-style: none;
-            
-            display: block;
-        }
-
-        .landing-page > .mobile-navigation > ul > li {
-            margin-bottom: 8%;
-        }
-        .landing-page > .mobile-navigation > ul > li > a
-        {
-            color: var(--gray);
-        }
-
-        .dropdown ul{
-            background-color: 	#242526;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .dropdown > #listItem{
-            margin-left: 6px;
-        }
-        .dropdown ul > li > a{
-            color: var(--gray);
-        }
-
-        .landing-page > .contact{
-            display: none;
-        }
-
-        .mobile-navigation {
-				position: fixed;
-				top: 100px;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				transform: translateX(100%);
-				opacity: 0;
-				background-color: rgba(39, 8, 8, 0.26);
-				width: 100vw;
-				height: 100vh;
-				display: grid;
-
-				/* place-items: center; */
-				font-size: 1.3rem;
-				transition: all 850ms ease-in;
-				color: #fff;
-			}
-
-			/* .mobile-navigation ul li {
-				width: 100%;
-				padding: 10px;
-				margin: 2rem;
-			}
-			.mobile-navigation ul li a {
-				background-color: white;
-				
-				text-align: center;
-				color: #fff;
-				text-decoration: none;
-			} */
-
-			.mobile-navigation.active {
-				transform: translateX(0);
-				opacity: 1;
-				background-color: rgba(161, 36, 36, 0.856);
-			}
-            .mobile-menu {
-					display: block;
-					color: white;
-				}
-    }
-
-        /* media responsive end here */
-
-
-    </style>
+   
 </head>
 <body>
     
@@ -481,14 +26,11 @@
 
             <div class="header-nav" id="navLinks">
 				<i id="button" class="fa-solid fa-bars mobile-menu" aria-hidden="true"></i>
-				<ul id="myTarget" class="my-target">
-
-				</ul>
 			</div>
 
 			<div class="mobile-navigation">
 				<ul>
-					<li class="nav-links"><a href="./index.html">Home</a></li>
+					<li class="nav-links"><a href="./index.html active">Home</a></li>
 					<li class="nav-links"><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<li class="dropdown">
@@ -524,7 +66,61 @@
     </section>
     <!-- header ends -->
 
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        let mobileNav = document.querySelector(".mobile-navigation");
+        let mobileNavButton = document.querySelector(".mobile-menu");
+        
+        // Function to toggle mobile navigation
+        function toggleMobileNav() {
+            mobileNav.classList.toggle("active");
+    
+            // Toggle icon between bars and xmark
+            if (mobileNavButton.classList.contains("fa-bars")) {
+                mobileNavButton.classList.remove("fa-bars");
+                mobileNavButton.classList.add("fa-xmark");
+                mobileNavButton.classList.add("fa-flip");
+                setTimeout(() => {
+                    mobileNavButton.classList.remove("fa-flip");
+                }, 400);
+            } else if (mobileNavButton.classList.contains("fa-xmark")) {
+                mobileNavButton.classList.remove("fa-xmark");
+                mobileNavButton.classList.add("fa-bars");
+                mobileNavButton.classList.add("fa-flip");
+                setTimeout(() => {
+                    mobileNavButton.classList.remove("fa-flip");
+                }, 400);
+            }
+        }
+    
+        // Event listener for mobile menu button
+        mobileNavButton.addEventListener("click", toggleMobileNav);
+    
+        // Event listener for navigation links to close the menu
+        let navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(function(navLink) {
+            navLink.addEventListener('click', function() {
+                toggleMobileNav();
+            });
+        });
+    
+        // Event listener for window resize to close menu if window width > 800px
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 800) {
+                mobileNav.classList.remove("active");
+                if (mobileNavButton.classList.contains("fa-xmark")) {
+                    mobileNavButton.classList.remove("fa-xmark");
+                    mobileNavButton.classList.add("fa-bars");
+                }
+            }
+        });
+    });
+    
 
+</script>
+
+<!-- 
     <script>
        	    let mobileNav = document.querySelector(".mobile-navigation");
 			let mobileNavButton = document.querySelector(".mobile-menu");
@@ -561,7 +157,7 @@
 					}
 				}
 			});
-    </script>
+    </script> -->
 
 </body>
 </html>

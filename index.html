@@ -16,8 +16,9 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <!-- landing page here -->
-    <section class="landing-page" id="landing-page">
+     <!-- header start here -->
+
+     <section class="landing-page" id="landing-page">
 
         <div class="Logo">
             <div class="logoP">
@@ -31,16 +32,13 @@
 
         <div class="header-nav" id="navLinks">
             <i id="button" class="fa-solid fa-bars mobile-menu" aria-hidden="true"></i>
-            <ul id="myTarget" class="my-target">
-
-            </ul>
         </div>
 
         <div class="mobile-navigation">
-            <ul id="myTarget" class="my-target">
-                <li class="nav-links"><a href="./index.html">Home</a></li>
+            <ul class="myTarget">
+                <li class="nav-links"><a href="./index.html active">Home</a></li>
                 <li class="nav-links"><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li class="nav-links"><a href="#services">Services</a></li>
                 <li class="dropdown">
                     <div class="School" id="listItem">
                         Information
@@ -69,10 +67,9 @@
         <div class="contact">
             <a href="#">Contact us</a>
         </div>
-
-      
 </section>
-    <!-- header ends -->
+<!-- header ends -->
+
 
     <!-- landing page here -->
 
@@ -396,13 +393,13 @@
                 <h1 class="toTeach">School Time</h1>
                 <p class="toTeach">Mon,Fri: 8:00 - 20-00</p>
                 <p class="toTeach">sat: 9:00 - 19:00</p>
-            <div class="media">
-                <a href="#"><i class="fa fa-whatsapp"></i></a>
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram" ></i></a>
-                <a href="#"><i class="fa fa-twitter" ></i></a>
-                <a href="#"><i class="fa fa-telegram" ></i></a>
-            </div>
+                <div class="media">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                </div>
             </div>
 
             <div class="box_details" id="contacti">
@@ -410,7 +407,6 @@
             <a href="#" class="toTeach"><i class="fa fa-map-marker" aria-hidden="true"></i>Omo Hiya Group of Schools Isale koko Oja Gboro, Ilorin, Kwara State, Nigeria.</a>
             <a href="#" class="toTeach"><i class="fa fa-phone-square" aria-hidden="true"></i> 09067640102 / 08038447454</a>
             <a href="#" class="toTeach"><i class="fa fa-envelope" aria-hidden="true"></i> omohiyagroupofschools@gmail.com </a>
-            <a href="#" class="toTeach"><i class="fa fa-facebook" aria-hidden="true"></i>Omohiyagroupofschools</a>
             </div>
         </div>
     </section>
@@ -420,61 +416,94 @@
     </div>
 
 
-    <script>
+    <!-- <script>
 
+            
+    document.addEventListener('DOMContentLoaded', function() {
+        let mobileNav = document.querySelector(".mobile-navigation");
+        let mobileNavButton = document.querySelector(".mobile-menu");
+        
+        // Function to toggle mobile navigation
+        function toggleMobileNav() {
+            mobileNav.classList.toggle("active");
+    
+            // Toggle icon between bars and xmark
+            if (mobileNavButton.classList.contains("fa-bars")) {
+                mobileNavButton.classList.remove("fa-bars");
+                mobileNavButton.classList.add("fa-xmark");
+                mobileNavButton.classList.add("fa-flip");
+                setTimeout(() => {
+                    mobileNavButton.classList.remove("fa-flip");
+                }, 400);
+            } else if (mobileNavButton.classList.contains("fa-xmark")) {
+                mobileNavButton.classList.remove("fa-xmark");
+                mobileNavButton.classList.add("fa-bars");
+                mobileNavButton.classList.add("fa-flip");
+                setTimeout(() => {
+                    mobileNavButton.classList.remove("fa-flip");
+                }, 400);
+            }
+        }
+    
+        // Event listener for mobile menu button
+        mobileNavButton.addEventListener("click", toggleMobileNav);
+    
+        // Event listener for navigation links to close the menu
+        let navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(function(navLink) {
+            navLink.addEventListener('click', function() {
+                toggleMobileNav();
+            });
+        });
+    
+        // Event listener for window resize to close menu if window width > 800px
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 800) {
+                mobileNav.classList.remove("active");
+                if (mobileNavButton.classList.contains("fa-xmark")) {
+                    mobileNavButton.classList.remove("fa-xmark");
+                    mobileNavButton.classList.add("fa-bars");
+                }
+            }
+        });
+    });
+    
            
-			let mobileNav = document.querySelector(".mobile-navigation");
-			let mobileNavButton = document.querySelector(".mobile-menu");
-			mobileNavButton.addEventListener("click", () => {
-				mobileNav.classList.add("active");
-				if (mobileNavButton.classList.contains("fa-bars")) {
-					mobileNavButton.classList.remove("fa-bars");
-					mobileNavButton.classList.add("fa-xmark");
-					mobileNavButton.classList.add("fa-flip");
-					setTimeout(() => {
-						mobileNavButton.classList.remove("fa-flip");
-					}, 400);
-					return;
-				}
-				if (mobileNavButton.classList.contains("fa-xmark")) {
-					mobileNav.classList.remove("active");
-					mobileNavButton.classList.remove("fa-xmark");
-					mobileNavButton.classList.add("fa-bars");
-					mobileNavButton.classList.add("fa-flip");
-					setTimeout(() => {
-						mobileNavButton.classList.remove("fa-flip");
-					}, 400);
-					return;
-				}
-			});
+			// let mobileNav = document.querySelector(".mobile-navigation");
+			// let mobileNavButton = document.querySelector(".mobile-menu");
+			// mobileNavButton.addEventListener("click", () => {
+			// 	mobileNav.classList.add("active");
+			// 	if (mobileNavButton.classList.contains("fa-bars")) {
+			// 		mobileNavButton.classList.remove("fa-bars");
+			// 		mobileNavButton.classList.add("fa-xmark");
+			// 		mobileNavButton.classList.add("fa-flip");
+			// 		setTimeout(() => {
+			// 			mobileNavButton.classList.remove("fa-flip");
+			// 		}, 400);
+			// 		return;
+			// 	}
+			// 	if (mobileNavButton.classList.contains("fa-xmark")) {
+			// 		mobileNav.classList.remove("active");
+			// 		mobileNavButton.classList.remove("fa-xmark");
+			// 		mobileNavButton.classList.add("fa-bars");
+			// 		mobileNavButton.classList.add("fa-flip");
+			// 		setTimeout(() => {
+			// 			mobileNavButton.classList.remove("fa-flip");
+			// 		}, 400);
+			// 		return;
+			// 	}
+			// });
 
-			window.addEventListener("resize", () => {
-				if (window.innerWidth > 800) {
-					mobileNav.classList.remove("active");
-					if (mobileNavButton.classList.contains("fa-xmark")) {
-						mobileNavButton.classList.remove("fa-xmark");
-						mobileNavButton.classList.add("fa-bars");
-						return;
-					}
-				}
-			});
-
-
-        // let navLinks = document.getElementById("navLinks");
-    
-        // function showMenu(){
-        //     navLinks.style.left = "0px";
-        //     console.log();
-        // }
-        // function hideMenu(){
-        //     navLinks.style.left = "-500px";
-        //     console.log();
-        // }
-    
-        // let target = document.getElementById("myTarget");
-        // if (target){
-        //     target.addEventListener("click", hideMenu);
-        // }
+			// window.addEventListener("resize", () => {
+			// 	if (window.innerWidth > 800) {
+			// 		mobileNav.classList.remove("active");
+			// 		if (mobileNavButton.classList.contains("fa-xmark")) {
+			// 			mobileNavButton.classList.remove("fa-xmark");
+			// 			mobileNavButton.classList.add("fa-bars");
+			// 			return;
+			// 		}
+			// 	}
+			// });
 
         // scroll reveal on the header 
         const header = document.getElementById("landing-page");
@@ -488,9 +517,10 @@
                 header.classList.remove('active');
             }
         };
-    </script>
+    </script> -->
     
-
+    <script src="./Js/mediaFunc.js">
+    </script>
     <script src="./Js/animation.js">
     </script>
 

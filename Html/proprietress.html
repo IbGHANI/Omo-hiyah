@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Css/proprietress.css">
     <link rel="stylesheet" href="../Css/respossivness/proprietressRes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital@1&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
@@ -15,57 +16,56 @@
 </head>
 <body>
 
-
+    <!-- header start here -->
     <section class="landing-page" id="landing-page">
-
         <div class="Logo">
             <div class="logoP">
                 <img src="../Image/logo.JPG" alt="">
             </div>
-
             <div class="logoT">
                 <h5 class="name">Omo-hiyah</h5>
                 <p class="name">group of schools</p>
             </div>
-
         </div>
 
         <div class="header-nav" id="navLinks">
-            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()" id="hideMenu"></i>
-            <ul id="myTarget">
-                <li class="nav-item"><a href="../index.html">home</a></li>
-                <li class="nav-item"><a href="#about">about</a></li>
-                <li><a href="#services">services</a></li>
-            
-                <li class="dropdown">
-                    <div class="School" id="listItem">
-                        information<i class="fa fa-angle-down arrow" aria-hidden="true"></i>
-                    </div>
-                    <ul>
-                        <li class="nav-item">
-                            <a href="./founder.html" class="links">proprietor</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#proprietress" class="links">proprietress</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./principal.html" class="links">principal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="links">head-master</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#sections">sections</a></li>
-                <li><a href="#gallery">gallery</a></li>
-            </ul>
+            <i id="button" class="fa-solid fa-bars mobile-menu" aria-hidden="true"></i>
         </div>
 
-        <div class="contact">
-            <a href="#">contact us</a>
+        <div class="mobile-navigation">
+            <ul class="myTarget">
+                <li class="nav-links"><a href="./index.html active">Home</a></li>
+                <li class="nav-links"><a href="#about">About</a></li>
+                <li class="nav-links"><a href="#services">Services</a></li>
+                <li class="dropdown">
+                    <div class="School" id="listItem">
+                        Information
+                        <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+                    </div>
+                    <ul id="">
+                            <li class="nav-links">
+                                <a href="./Html/founder.html" class="links">Proprietor</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="./Html/proprietress.html" class="links">Proprietress</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="./Html/principal.html" class="links">Principal</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="#" class="links">Head-master</a>
+                            </li>
+                        </ul>
+                </li>
+                <li class="nav-links"><a href="#sections">Sections</a></li>
+                <li class="nav-links"><a href="#gallery">Gallery</a></li>
+            </ul>
         </div>
-        <i class="fa fa-align-justify showMenu" aria-hidden="true" onclick="showMenu()" id="showMenu"></i>
-    </section>
+        <div class="contact">
+            <a href="#">Contact us</a>
+        </div>
+</section>
+<!-- header ends -->
 
 
     <!-- the header ends here -->

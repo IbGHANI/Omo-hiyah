@@ -42,6 +42,51 @@ html{
 
 /* lading page styling start here */
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+
+:root{
+
+    --dark: #000;
+    --darkgreen: rgb(9, 77, 9);
+    --black: #333;
+    --gray: #f9f9f9;
+    --darkgray: #676767;
+    --lightblack: #444;
+    --white: #fff;
+    --color: bisque;
+    --green: #2bb573;
+    --lightgreen: #5ed39b;
+    --ldgreen: #ecfff6;
+    --fbg: #0c0b09;
+    --fontfamily: "Kumbh Sans", sans-serif;
+    --fontsize: 18px;
+    --fontrems: 2rem;
+    --fontsmallrem: 1.2rem;
+    --fontsmallsize: 13px;
+    --letterspacing: 1.5px;
+    --texttranform: capitalize;
+    --transition: 0.5s;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+/* lading page styling start here */
+
 .landing-page{
     position: relative;
     display: flex;  
@@ -49,8 +94,7 @@ html{
     align-items: center;
     width: 100%;
     padding: 2% 3%;
-    background-color: #166d3b;
-    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+    background: transparent;
     position: fixed;
     z-index: 1000;
     box-shadow: 2px 1px 2px var(--fbg);
@@ -108,22 +152,25 @@ html{
     text-transform: var(--texttranform);
     cursor: pointer;
 }
+.header-nav{
+    display: none;
+}
 
-.landing-page > .header-nav{
+.landing-page > .mobile-navigation{
     display: flex;
     align-items: center;
 }
 
-.landing-page > .header-nav > ul{
+.landing-page > .mobile-navigation > ul{
     list-style: none;
     display: flex;
 }
 
-.landing-page > .header-nav > ul > li{
+.landing-page > .mobile-navigation > ul > li{
     margin-right: 13px;
 }
 
-.landing-page > .header-nav > ul > li > a{
+.landing-page > .mobile-navigation > ul > li > a{
     position: relative;
     text-decoration: none;
     color: var(--gray);
@@ -135,24 +182,28 @@ html{
     cursor: pointer;
 }
 
-.landing-page.active > .header-nav > ul > li > a,
+
 .landing-page.active > .Logo > .logoT > p,
-.landing-page.active > .header-nav > ul > .dropdown #listItem,
-.landing-page.active > .header-nav > ul > .dropdown ul li a
+.landing-page.active > .mobile-navigation > ul > li > a,
+.landing-page.active > .mobile-navigation > ul > .dropdown #listItem,
+.landing-page.active > .mobile-navigation > ul > .dropdown ul li a
 {
     color: var(--fbg);
 }
 .landing-page.active > .Logo > .logoT > h5,
-.landing-page.active > .header-nav > ul > .dropdown ul
+.landing-page.active > .mobile-navigation > ul > .dropdown ul
 {
     color: var(--darkgreen);
 }
+.landing-page.active > .mobile-navigation > ul > .dropdown ul a:hover{
+    color: var(--lightgreen);
+}
 
-.landing-page.active > .header-nav > ul > .dropdown ul{
+.landing-page.active > .mobile-navigation > ul > .dropdown ul{
     background-color: var(--ldgreen);
 }
 
-.landing-page > .header-nav > ul > li > a::before{
+.landing-page > .mobile-navigation > ul > li > a::before{
     content: '';
     width: 100%;
     height: 2px;
@@ -165,8 +216,12 @@ html{
     transition: transform .5s linear;
     
 }
+.landing-page > .mobile-navigation > ul > li > a:active{
+    color: var(--lightgreen);
 
-.landing-page > .header-nav > ul > li > a:hover::before{
+}
+
+.landing-page > .mobile-navigation > ul > li > a:hover::before{
     transform: scale(1);
     transform-origin: left;
     cursor: pointer;
@@ -212,16 +267,6 @@ html{
     z-index: 1;
     list-style: none;
 }
-/* 
-.landing-page.active > .dropdown ul{
-    position: absolute;
-    padding: 1% 1%;
-    background-color: var(--ldgreen);
-    min-width: 150px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    list-style: none;
-} */
 
 .dropdown:hover > ul{
     display: block;
@@ -259,7 +304,7 @@ html{
 }
 
 .links{
-  margin-bottom: 8px;
+margin-bottom: 8px;
 }
 
 .dropdown ul .dropdown ul {
@@ -271,14 +316,7 @@ html{
 .dropdown ul .dropdown:hover > ul {
     display: block;
 }
-
-#hideMenu,
-#showMenu{
-    display: none;
-}
-
-
-/* the header ends here */
+/* header ends here */
 
 
 /* the founder page start here */

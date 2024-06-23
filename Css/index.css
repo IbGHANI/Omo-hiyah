@@ -1,12 +1,18 @@
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+}
 
 
 :root{
-  
+
     --dark: #000;
     --darkgreen: rgb(9, 77, 9);
     --black: #333;
@@ -104,45 +110,39 @@ html{
     text-transform: var(--texttranform);
     cursor: pointer;
 }
+.header-nav{
+    display: none;
+}
 
 .landing-page > .mobile-navigation{
     display: flex;
     align-items: center;
-    width: 50%;
-    background-color: red;
-    justify-content: center;
 }
 
 .landing-page > .mobile-navigation > ul{
     list-style: none;
     display: flex;
 }
-/* 
+
 .landing-page > .mobile-navigation > ul > li{
-    margin-right: 5px;
-} */
+    margin-right: 13px;
+}
 
 .landing-page > .mobile-navigation > ul > li > a{
     position: relative;
     text-decoration: none;
     color: var(--gray);
     text-transform: var(--texttranform);
-    font-size: 10px;
     font-family: var(--fontfamily);
     letter-spacing: 1px;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
     cursor: pointer;
 }
-.mobile-navigation .dropdown{
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
-.landing-page.active > .mobile-navigation> ul > li > a,
+
 .landing-page.active > .Logo > .logoT > p,
+.landing-page.active > .mobile-navigation > ul > li > a,
 .landing-page.active > .mobile-navigation > ul > .dropdown #listItem,
 .landing-page.active > .mobile-navigation > ul > .dropdown ul li a
 {
@@ -152,6 +152,9 @@ html{
 .landing-page.active > .mobile-navigation > ul > .dropdown ul
 {
     color: var(--darkgreen);
+}
+.landing-page.active > .mobile-navigation > ul > .dropdown ul a:hover{
+    color: var(--lightgreen);
 }
 
 .landing-page.active > .mobile-navigation > ul > .dropdown ul{
@@ -181,6 +184,8 @@ html{
     transform-origin: left;
     cursor: pointer;
 }
+
+
 
 .landing-page > .contact{
     width: 100px;
@@ -240,7 +245,7 @@ html{
     color: var(--fbg);
 }
 
-.mobile-navigation > .dropdown ul li a:hover
+.dropdown ul li a:hover
 {
     color: var(--lightgreen);
     transition: var(--transition);
@@ -257,7 +262,7 @@ html{
 }
 
 .links{
-  margin-bottom: 8px;
+margin-bottom: 8px;
 }
 
 .dropdown ul .dropdown ul {
@@ -269,37 +274,6 @@ html{
 .dropdown ul .dropdown:hover > ul {
     display: block;
 }
-
-#button{
-    display: none;
-}
-/* the new bar style here */
-li {
-    list-style-type: none;
-}
-
-.my-target {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-}
-
-.my-target li {
-    margin-left: 3rem;
-    font-size: 1.4rem;
-}
-
-.my-target li a {
-    text-decoration: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-/* the new bar style ends here */
-
 /* header ends here */
 
 /* landing 2 start here */
